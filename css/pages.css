@@ -2022,3 +2022,102 @@ textarea.form-control {
     padding: 2.5rem 1.5rem;
   }
 }
+
+/* ==========================================================================
+   PAGES RESPONSIVE LAYER — 1024 / 760 / 480 / 360 / 320
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .features-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .courses-grid,
+  .features-grid,
+  .instructors-grid,
+  .steps-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.9rem 1rem;
+  }
+  .countdown-grid {
+    gap: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-grid,
+  .features-grid,
+  .instructors-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-box {
+    padding: 1.5rem;
+  }
+  .step-card {
+    padding: 1.5rem;
+  }
+  .course-card-content {
+    padding: 1.25rem;
+  }
+  .instructor-card {
+    padding: 2rem 1.25rem;
+  }
+  .form-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.85rem;
+  }
+  .countdown-box {
+    min-width: 88px;
+    padding: 1rem;
+  }
+  .countdown-digits {
+    font-size: 1.9rem;
+  }
+  .hero-cta-group .btn {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .countdown-box {
+    min-width: 78px;
+    padding: 0.85rem 0.6rem;
+  }
+  .countdown-digits {
+    font-size: 1.6rem;
+  }
+  .gallery-filter-bar {
+    gap: 0.5rem;
+  }
+  .filter-btn {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .feature-box,
+  .step-card,
+  .course-card-content,
+  .instructor-card {
+    padding: 1.25rem 1rem;
+  }
+  .form-card {
+    padding: 1.25rem 1rem;
+  }
+}

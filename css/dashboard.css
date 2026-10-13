@@ -1046,6 +1046,54 @@
   font-size: 0.7rem;
 }
 
+/* My Courses cards: progress ring on thumb */
+#my-courses-grid .course-card {
+  border-radius: var(--radius-xl);
+}
+
+.my-course-progress-ring {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(var(--color-coral) calc(var(--p, 0) * 1%), rgba(255, 255, 255, 0.3) 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.my-course-progress-ring > span {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(15, 17, 21, 0.85);
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[dir="rtl"] .my-course-progress-ring {
+  left: auto;
+  right: 1rem;
+}
+
+#my-courses-grid .btn .ic {
+  width: 14px;
+  height: 14px;
+}
+
+#my-courses-grid .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .dashboard-tab-panel.active,
   .progress-fill {
@@ -1055,5 +1103,61 @@
   .metric-card:hover,
   .assignment-card:hover {
     transform: none;
+  }
+}
+
+/* ==========================================================================
+   DASHBOARD RESPONSIVE LAYER — 760 / 480 / 360 / 320
+   ========================================================================== */
+
+.billing-card {
+  overflow-x: auto;
+}
+
+@media (max-width: 760px) {
+  .dashboard-view-title {
+    font-size: 1.7rem;
+  }
+  .feedback-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-main {
+    padding: 4rem 1rem 1.5rem;
+  }
+  .metric-card,
+  .billing-card,
+  .feedback-card {
+    padding: 1.25rem;
+  }
+  .metric-value {
+    font-size: 1.9rem;
+  }
+  .assignment-card {
+    padding: 1.25rem;
+  }
+  .continue-card {
+    padding: 1.5rem;
+  }
+  .player-main-view {
+    padding: 1rem;
+  }
+  .sidebar-brand {
+    padding: 1.1rem 1rem 0.6rem;
+  }
+  .sidebar-user-card {
+    margin: 0.75rem 0.75rem 0;
+    padding: 0.9rem 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .dashboard-view-title {
+    font-size: 1.5rem;
+  }
+  .overview-stats-grid {
+    grid-template-columns: 1fr;
   }
 }

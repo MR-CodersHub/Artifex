@@ -1136,7 +1136,93 @@ a.action-icon-btn {
   border-color: var(--color-coral);
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
+/* ==========================================================================
+   GLOBAL RESPONSIVE LAYER — 1024 / 760 / 480 / 360 / 320
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .header-container {
+    gap: 1rem;
+  }
+  .main-nav {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header .brand-tagline {
+    display: none;
+  }
+  .pages-modal-header,
+  .pages-modal-body {
+    padding: 1.25rem;
+  }
+  .mobile-nav-drawer {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .container-narrow,
+  .container-wide {
+    padding-inline: 1rem;
+  }
+  .header-container {
+    gap: 0.6rem;
+    height: 68px;
+  }
+  .header-actions {
+    gap: 0.45rem;
+  }
+  .header-actions .action-icon-btn,
+  .header-actions .btn-mobile-toggle {
+    width: 36px;
+    height: 36px;
+  }
+  .header-actions .btn .icon-arrow {
+    display: none;
+  }
+  .header-actions .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.82rem;
+  }
+  .site-footer .newsletter-form button {
+    flex: 1 1 100%;
+  }
+  .back-to-top {
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .artifex-toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: none;
+  }
+  [dir="rtl"] .artifex-toast-container {
+    left: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-logo {
+    font-size: 1.2rem;
+  }
+  .header-actions .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .pages-modal-header,
+  .pages-modal-body {
+    padding: 1rem;
+  }
+  .pages-modal-title {
+    font-size: 1.1rem;
+  }
+}
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;

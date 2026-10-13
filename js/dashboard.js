@@ -129,21 +129,21 @@
     const enrolled = window.ArtifexData.courses.filter(c => c.enrolled);
 
     container.innerHTML = enrolled.map(course => `
-      <div class="course-card">
+      <div class="course-card my-course-card">
         <div class="course-card-thumb">
           <img src="${course.coverImage}" alt="${course.title}">
           <span class="badge badge-coral course-badge-overlay">${course.medium}</span>
-          <span class="course-duration-tag">${course.progress}% Completed</span>
+          <span class="course-duration-tag">${course.duration}</span>
+          <div class="my-course-progress-ring" style="--p:${course.progress};" role="img" aria-label="${course.progress}% completed">
+            <span>${course.progress}%</span>
+          </div>
         </div>
         <div class="course-card-content">
           <div class="course-meta-row">
             <span>${course.skillLevel}</span>
-            <span>${course.duration}</span>
+            <span>${course.lessonsCount} Lessons</span>
           </div>
           <h4 class="course-title">${course.shortTitle}</h4>
-          <div class="progress-track" style="margin-block: 0.75rem;">
-            <div class="progress-fill" style="width: ${course.progress}%;"></div>
-          </div>
           <div class="course-instructor-row">
             <img class="instructor-tiny-avatar" src="${course.instructorAvatar}" alt="${course.instructorName}">
             <div class="instructor-tiny-info">
@@ -151,7 +151,8 @@
               <span class="instructor-tiny-sub">${course.instructorRole}</span>
             </div>
             <button class="btn btn-sm btn-coral" style="margin-left: auto;" data-switch-tab="modules">
-              Continue
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg>
+              <span>Continue</span>
             </button>
           </div>
         </div>
