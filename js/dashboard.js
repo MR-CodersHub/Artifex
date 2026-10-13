@@ -158,6 +158,19 @@
         </div>
       </div>
     `).join("");
+
+    const setStat = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    };
+    const done = enrolled.filter((c) => (c.progress || 0) >= 100).length;
+    const avg = enrolled.length
+      ? Math.round(enrolled.reduce((s, c) => s + (c.progress || 0), 0) / enrolled.length) + "%"
+      : "0%";
+    setStat("enrolled-count", enrolled.length);
+    setStat("inprogress-count", enrolled.length - done);
+    setStat("completed-count", done);
+    setStat("avg-progress", avg);
   }
 
   // 5. Course Player & Modules Navigator
