@@ -795,7 +795,7 @@ window.ArtifexData = {
       date: "Aug 14, 2026",
       author: "Elena Rostova",
       authorAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+      image: "https://i.pinimg.com/1200x/7e/71/81/7e7181a3f93599ce98df9edf5ccd2e0c.jpg",
       excerpt: "Stop collecting 5,000 brushes. Discover the 4 core brush dynamics that professional concept artists rely on.",
       tutorialSteps: [
         { step: 1, title: "Flow Versus Opacity", desc: "Flow controls how much paint lands per stroke pass; opacity caps total transparency. Professionals ride flow for gradual build-up." },

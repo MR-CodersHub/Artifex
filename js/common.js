@@ -14,16 +14,14 @@
     { num: 6, name: "Blog", path: "pages/blog.html", sections: 6, group: "Main Pages" },
     { num: 7, name: "Blog Details", path: "pages/blog-details.html", sections: 6, group: "Main Pages" },
     { num: 8, name: "Contact Us", path: "pages/contact.html", sections: 6, group: "Main Pages" },
-    { num: 9, name: "Admin Dashboard", path: "pages/admin-dashboard.html", sections: "Portal App", group: "Portals" },
-    { num: 10, name: "Student Dashboard", path: "pages/student-dashboard.html", sections: "Primary Portal", group: "Portals" },
-    { num: 11, name: "Pricing", path: "pages/pricing.html", sections: 6, group: "Additional Pages" },
-    { num: 12, name: "Login", path: "pages/login.html", sections: 6, group: "Additional Pages" },
-    { num: 13, name: "Signup", path: "pages/signup.html", sections: 6, group: "Additional Pages" },
-    { num: 14, name: "404 Not Found", path: "pages/404.html", sections: 6, group: "Additional Pages" },
-    { num: 15, name: "Maintenance", path: "pages/maintenance.html", sections: 6, group: "Additional Pages" },
-    { num: 16, name: "Sitemap", path: "pages/sitemap.html", sections: 6, group: "Additional Pages" },
-    { num: 17, name: "Privacy Policy", path: "pages/privacy.html", sections: "Legal Policy", group: "Legal & Policy" },
-    { num: 18, name: "Terms & Conditions", path: "pages/terms.html", sections: "Atelier Terms", group: "Legal & Policy" }
+    { num: 9, name: "Pricing", path: "pages/pricing.html", sections: 6, group: "Additional Pages" },
+    { num: 10, name: "Login", path: "pages/login.html", sections: 6, group: "Additional Pages" },
+    { num: 11, name: "Signup", path: "pages/signup.html", sections: 6, group: "Additional Pages" },
+    { num: 12, name: "404 Not Found", path: "pages/404.html", sections: 6, group: "Additional Pages" },
+    { num: 13, name: "Maintenance", path: "pages/maintenance.html", sections: 6, group: "Additional Pages" },
+    { num: 14, name: "Sitemap", path: "pages/sitemap.html", sections: 6, group: "Additional Pages" },
+    { num: 15, name: "Privacy Policy", path: "pages/privacy.html", sections: "Legal Policy", group: "Legal & Policy" },
+    { num: 16, name: "Terms & Conditions", path: "pages/terms.html", sections: "Atelier Terms", group: "Legal & Policy" }
   ];
 
   function isInPagesDir() {
@@ -144,7 +142,6 @@
       modal.className = "pages-modal-backdrop";
       
       const mainPages = PAGES_CATALOG.filter(p => p.group === "Main Pages");
-      const portals = PAGES_CATALOG.filter(p => p.group === "Portals");
       const additional = PAGES_CATALOG.filter(p => p.group === "Additional Pages");
       const legal = PAGES_CATALOG.filter(p => p.group === "Legal & Policy");
 
@@ -168,10 +165,6 @@
             <div>
               <div class="pages-group-title">Main Public Pages</div>
               <div class="pages-grid">${renderChips(mainPages)}</div>
-            </div>
-            <div>
-              <div class="pages-group-title">Application Portals</div>
-              <div class="pages-grid">${renderChips(portals)}</div>
             </div>
             <div>
               <div class="pages-group-title">Additional Pages</div>

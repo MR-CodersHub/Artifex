@@ -61,6 +61,8 @@
     const badge = BADGE[post.category] || 'badge-coral';
     const courseId = CATEGORY_COURSE[post.category] || 'course_digital_mastery';
     const course = (window.ArtifexData.courses || []).find((c) => c.id === courseId);
+    const rawImg = qs.get('img');
+    const heroImg = rawImg && /^https?:\/\//i.test(rawImg) ? rawImg : post.image;
 
     document.title = `${post.title} — Artifex Academy Journal`;
 
@@ -82,7 +84,7 @@
           </div>
         </div>
         <div class="hero-image-frame" style="aspect-ratio:16/9;border-radius:var(--radius-xl);max-height:500px;">
-          <img src="${esc(post.image)}" alt="${esc(post.title)}">
+          <img src="${esc(heroImg)}" alt="${esc(post.title)}">
         </div>
       </div>`;
 
@@ -261,6 +263,8 @@
 
     const [t1, t2] = splitTitle(course.title);
     document.title = `${course.shortTitle} — Artifex Academy Courses`;
+    const rawCover = qs.get('img');
+    const heroCover = rawCover && /^https?:\/\//i.test(rawCover) ? rawCover : course.coverImage;
 
     // 1. Hero
     document.getElementById('course-hero').innerHTML = `
@@ -288,7 +292,7 @@
             </div>
           </div>
           <div class="hero-cta-group">
-            <a href="student-dashboard.html" class="btn btn-coral btn-lg">
+            <a href="signup.html" class="btn btn-coral btn-lg">
               <span>Enroll Now — Start Learning</span>
               <span class="icon-arrow">→</span>
             </a>
@@ -299,7 +303,7 @@
         </div>
         <div class="hero-visual">
           <div class="hero-image-frame">
-            <img src="${esc(course.coverImage)}" alt="${esc(course.shortTitle)}">
+            <img src="${esc(heroCover)}" alt="${esc(course.shortTitle)}">
           </div>
         </div>
       </div>`;
@@ -418,7 +422,7 @@
               ${outcomes.slice(0, 4).map((o) => `<li>${esc(o)}</li>`).join('')}
             </ul>
           </div>
-          <a href="student-dashboard.html" class="btn btn-coral">Enter Learning Environment →</a>
+          <a href="signup.html" class="btn btn-coral">Create Student Account →</a>
         </div>
         <div class="hero-visual">
           <div class="card" style="overflow:hidden;">
