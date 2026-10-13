@@ -1386,6 +1386,205 @@ textarea.form-control {
   }
 }
 
+/* --- VALUES CHARTER (about core values, dark) --- */
+.values-charter {
+  max-width: 900px;
+  margin-inline: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.value-row {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.75rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all var(--transition-fast);
+}
+
+.value-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: var(--radius-md);
+}
+
+.value-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.4);
+}
+
+.value-body h3 {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin-bottom: 0.35rem;
+}
+
+.value-body p {
+  color: #B8BCCB;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .value-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .value-row .badge {
+    justify-self: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .value-row:hover {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* --- PHILOSOPHY MANIFESTO LIST (about creative philosophy) --- */
+.manifesto-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.manifesto-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.manifesto-item:first-child {
+  border-top: 1px solid var(--border-light);
+}
+
+.manifesto-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--color-coral), var(--color-cobalt));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.manifesto-item h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.manifesto-item p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* --- TEACHING APPROACH RAIL (about pedagogy stepper) --- */
+.approach-rail {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  padding-top: 1rem;
+}
+
+.approach-rail::before {
+  content: "";
+  position: absolute;
+  top: calc(1rem + 8px);
+  left: 4%;
+  right: 4%;
+  height: 2px;
+  background: var(--border-medium);
+  border-radius: var(--radius-full);
+}
+
+.approach-step {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+  padding-top: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.approach-step:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.approach-node {
+  position: absolute;
+  top: calc(-1rem - 1px);
+  left: 1.5rem;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--color-coral);
+  box-shadow: 0 0 0 5px var(--color-coral-light);
+}
+
+.approach-step:nth-child(2) .approach-node { background: var(--color-cobalt); box-shadow: 0 0 0 5px var(--color-cobalt-light); }
+.approach-step:nth-child(3) .approach-node { background: var(--color-sage); box-shadow: 0 0 0 5px var(--color-sage-light); }
+.approach-step:nth-child(4) .approach-node { background: var(--color-lavender); box-shadow: 0 0 0 5px var(--color-lavender-light); }
+.approach-step:nth-child(5) .approach-node { background: var(--color-peach); box-shadow: 0 0 0 5px var(--color-peach-light); }
+
+.approach-step .badge {
+  margin-bottom: 0.75rem;
+}
+
+.approach-step p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .approach-rail {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .approach-rail::before {
+    display: none;
+  }
+  .approach-node {
+    top: 1.25rem;
+    right: 1.25rem;
+    left: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .manifesto-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .approach-rail {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .approach-step:hover {
+    transform: none;
+  }
+}
+
 /* --- LEARNING JOURNEY TIMELINE (How Learning Works) --- */
 .journey-timeline {
   position: relative;
