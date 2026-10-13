@@ -13,106 +13,112 @@
 </head>
 <body>
 
-  <!-- MINIMAL TOP BAR (brand + theme controls, no nav, no footer) -->
-  <header class="minimal-topbar">
-    <div class="container minimal-topbar-container">
-      <a href="../index.html" class="brand-logo" aria-label="Artifex Academy Home">
-        <div class="brand-icon"><img src="../assets/images/logo.webp" alt="Artifex Academy logo"></div>
-        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
-      </a>
-      <div class="header-actions">
-        <!-- Theme Toggle -->
-        <button class="action-icon-btn btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-        <!-- RTL Toggle -->
-        <button class="action-icon-btn btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction">LTR</button>
-      </div>
-    </div>
-  </header>
+  <!-- Corner toggles (theme + direction, fixed top-right) -->
+  <div class="dash-corner-toggles">
+    <button class="toggle-pill toggle-icon-only btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+    <button class="toggle-pill btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction"><span>LTR</span></button>
+  </div>
 
-  <!-- MAIN CONTENT: AUTH FORM -->
+  <!-- MAIN CONTENT: AUTH SPLIT -->
   <main id="main-content">
+    <div class="auth-layout">
 
-    <!-- REGISTRATION FORM -->
-    <section id="register-form-section" class="section">
-      <div class="container-narrow">
-        <div class="section-header section-header--center">
-          <span class="section-tag section-tag--coral">Create Account</span>
-          <h2>Register a New Student Account</h2>
-          <p class="section-subtitle">
-            Tell us about your craft so we can personalize your learning path from day one.
-          </p>
+      <aside class="auth-side auth-side--alt">
+        <a href="../index.html" class="brand-logo" aria-label="Artifex Academy Home">
+          <div class="brand-icon"><img src="../assets/images/logo.webp" alt="Artifex Academy logo"></div>
+          <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+        </a>
+        <span class="badge badge-sage" style="margin-bottom:1.25rem;align-self:flex-start;">New Apprentice</span>
+        <h1>Begin your artistic <span class="font-serif">journey today.</span></h1>
+        <p class="auth-lead">Create your student profile in under a minute and start learning immediately with a 7-day trial pass.</p>
+        <ul class="auth-points">
+          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg><span>No payment required to start</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg><span>Personalized path from day one</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg><span>Cancel anytime, keep your work</span></li>
+        </ul>
+        <div class="auth-stats">
+          <div><strong>7-Day</strong><span>Free Trial</span></div>
+          <div><strong>38</strong><span>Master Courses</span></div>
+          <div><strong>24h</strong><span>Mentor Reply</span></div>
         </div>
+      </aside>
 
-        <div class="form-card" style="max-width:680px;margin-inline:auto;">
-          <form id="form-register" class="form-grid">
-            <!-- Full Name -->
-            <div class="form-group">
-              <label class="form-label" for="reg-name">Full Name *</label>
-              <input type="text" id="reg-name" class="form-control" placeholder="e.g. Liam Gallagher" required>
-            </div>
+      <div class="auth-main">
+        <!-- REGISTRATION FORM -->
+        <section id="register-form-section" class="auth-card" style="max-width:640px;">
+          <h2>Create Account</h2>
+          <p class="auth-sub">Tell us about your craft so we can personalize your path.</p>
+          <div class="form-card">
+            <form id="form-register" class="form-grid">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label class="form-label" for="reg-name">Full Name *</label>
+                <input type="text" id="reg-name" class="form-control" placeholder="e.g. Liam Gallagher" required>
+              </div>
 
-            <!-- Email Address -->
-            <div class="form-group">
-              <label class="form-label" for="reg-email">Email Address *</label>
-              <input type="email" id="reg-email" class="form-control" placeholder="liam@studio.artifex.com" required>
-            </div>
+              <!-- Email Address -->
+              <div class="form-group">
+                <label class="form-label" for="reg-email">Email Address *</label>
+                <input type="email" id="reg-email" class="form-control" placeholder="liam@studio.artifex.com" required>
+              </div>
 
-            <!-- Password -->
-            <div class="form-group">
-              <label class="form-label" for="reg-password">Password *</label>
-              <input type="password" id="reg-password" class="form-control" placeholder="Minimum 8 characters" required>
-            </div>
+              <!-- Password -->
+              <div class="form-group">
+                <label class="form-label" for="reg-password">Password *</label>
+                <input type="password" id="reg-password" class="form-control" placeholder="Minimum 8 characters" required>
+              </div>
 
-            <!-- Confirm Password -->
-            <div class="form-group">
-              <label class="form-label" for="reg-confirm-password">Confirm Password *</label>
-              <input type="password" id="reg-confirm-password" class="form-control" placeholder="Re-enter password" required>
-            </div>
+              <!-- Confirm Password -->
+              <div class="form-group">
+                <label class="form-label" for="reg-confirm-password">Confirm Password *</label>
+                <input type="password" id="reg-confirm-password" class="form-control" placeholder="Re-enter password" required>
+              </div>
 
-            <!-- Preferred Art Medium -->
-            <div class="form-group">
-              <label class="form-label" for="reg-medium">Preferred Art Medium</label>
-              <select id="reg-medium" class="form-control" required>
-                <option value="Digital Illustration">Digital Illustration</option>
-                <option value="Watercolor">Watercolor</option>
-                <option value="Character Design">Character Design</option>
-                <option value="Classical Drawing">Classical Drawing &amp; Figure</option>
-                <option value="Concept Art">Concept Art &amp; Worldbuilding</option>
-                <option value="Mixed Media">Mixed Media &amp; Sketchbooking</option>
-              </select>
-            </div>
+              <!-- Preferred Art Medium -->
+              <div class="form-group">
+                <label class="form-label" for="reg-medium">Preferred Art Medium</label>
+                <select id="reg-medium" class="form-control" required>
+                  <option value="Digital Illustration">Digital Illustration</option>
+                  <option value="Watercolor">Watercolor</option>
+                  <option value="Character Design">Character Design</option>
+                  <option value="Classical Drawing">Classical Drawing &amp; Figure</option>
+                  <option value="Concept Art">Concept Art &amp; Worldbuilding</option>
+                  <option value="Mixed Media">Mixed Media &amp; Sketchbooking</option>
+                </select>
+              </div>
 
-            <!-- Skill Level -->
-            <div class="form-group">
-              <label class="form-label" for="reg-level">Current Skill Level</label>
-              <select id="reg-level" class="form-control" required>
-                <option value="Beginner">Beginner (0–1 yr casual drawing)</option>
-                <option value="Intermediate" selected>Intermediate (1–3 yrs consistent drawing)</option>
-                <option value="Advanced">Advanced (Pursuing studio career)</option>
-              </select>
-            </div>
+              <!-- Skill Level -->
+              <div class="form-group">
+                <label class="form-label" for="reg-level">Current Skill Level</label>
+                <select id="reg-level" class="form-control" required>
+                  <option value="Beginner">Beginner (0–1 yr casual drawing)</option>
+                  <option value="Intermediate" selected>Intermediate (1–3 yrs consistent drawing)</option>
+                  <option value="Advanced">Advanced (Pursuing studio career)</option>
+                </select>
+              </div>
 
-            <div class="form-full" style="margin-top:0.5rem;">
-              <label style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;cursor:pointer;">
-                <input type="checkbox" required checked>
-                <span>I agree to the Artifex Studio Conduct &amp; Student Intellectual Property Terms.</span>
-              </label>
-            </div>
+              <div class="form-full" style="margin-top:0.5rem;">
+                <label style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;cursor:pointer;">
+                  <input type="checkbox" required checked>
+                  <span>I agree to the Artifex Studio Conduct &amp; Student Intellectual Property Terms.</span>
+                </label>
+              </div>
 
-            <div class="form-full" style="margin-top:0.75rem;">
-              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
-                Create Student Account &amp; Enter Dashboard →
-              </button>
-            </div>
-          </form>
-          <p style="text-align:center;margin-top:1.25rem;font-size:0.9rem;color:var(--text-secondary);">
-            Already enrolled?
-            <a href="login.html" style="color:var(--color-coral);font-weight:700;">Sign in to your account →</a>
-          </p>
-        </div>
+              <div class="form-full" style="margin-top:0.75rem;">
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+                  Create Student Account &amp; Enter Dashboard →
+                </button>
+              </div>
+            </form>
+            <p style="text-align:center;margin-top:1.25rem;font-size:0.9rem;color:var(--text-secondary);">
+              Already enrolled?
+              <a href="login.html" style="color:var(--color-coral);font-weight:700;">Sign in to your account →</a>
+            </p>
+          </div>
+        </section>
       </div>
-    </section>
 
+    </div>
   </main>
 
 

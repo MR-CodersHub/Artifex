@@ -1002,21 +1002,21 @@
 }
 
 .toggle-pill {
-  flex: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.9rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-light);
-  background: var(--bg-secondary);
+  background: var(--bg-surface);
   color: var(--text-secondary);
   font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
   transition: all var(--transition-fast);
   white-space: nowrap;
+  box-shadow: var(--shadow-md);
 }
 
 .toggle-pill:hover {
@@ -1031,7 +1031,18 @@
 }
 
 .toggle-pill.toggle-icon-only {
-  padding: 0.5rem;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.toggle-pill.toggle-circle-text {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 0.7rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

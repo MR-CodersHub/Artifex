@@ -893,6 +893,64 @@ a.action-icon-btn {
   flex: 1;
 }
 
+/* Fixed corner toggle pills (theme + direction, top-right) */
+.dash-corner-toggles {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+[dir="rtl"] .dash-corner-toggles {
+  right: auto;
+  left: 1rem;
+}
+
+.toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+}
+
+.toggle-pill:hover {
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+.toggle-pill .ic {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-pill.toggle-icon-only {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.toggle-pill.toggle-circle-text {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+
 .toast-close {
   color: var(--text-muted);
   font-size: 1.25rem;
