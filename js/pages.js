@@ -8,7 +8,7 @@
   function initPageInteractions() {
     // 1. Student Showcase Gallery Filtering
     const filterButtons = document.querySelectorAll(".gallery-filter-bar .filter-btn");
-    const galleryItems = document.querySelectorAll(".gallery-grid .artwork-card");
+    const galleryItems = document.querySelectorAll(".gallery-grid .artwork-card, .artwork-rail .artwork-card");
 
     if (filterButtons.length && galleryItems.length) {
       filterButtons.forEach(btn => {

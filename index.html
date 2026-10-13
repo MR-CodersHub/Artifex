@@ -304,10 +304,10 @@
           <button class="filter-btn" data-filter="Mixed Media">Mixed Media</button>
         </div>
 
-        <!-- Gallery Grid -->
-        <div class="gallery-grid">
+        <!-- Gallery Rail -->
+        <div class="artwork-rail" id="showcase-rail">
           <!-- Artwork 1 -->
-          <div class="artwork-card mosaic-wide" data-category="Digital" data-lightbox  
+          <div class="artwork-card" data-category="Digital" data-lightbox  
                data-lightbox-src="https://i.pinimg.com/736x/b4/12/0b/b4120b0a4fec42370b9a23202772e6af.jpg"
                data-lightbox-title="Solitude in the Neon Canopy"
                data-lightbox-meta="Digital Illustration • By Aurora Sterling">
@@ -371,7 +371,7 @@
           </div>
 
           <!-- Artwork 5 -->
-          <div class="artwork-card mosaic-tall" data-category="Digital" data-lightbox 
+          <div class="artwork-card" data-category="Digital" data-lightbox 
                data-lightbox-src="https://i.pinimg.com/736x/a4/8e/64/a48e64bfab888c74aa4f6d6b506fcbc4.jpg"
                data-lightbox-title="Forgotten Temple of the High Steppe"
                data-lightbox-meta="Concept Art • By David Novak">
@@ -466,6 +466,25 @@
             </div>
           </div>
         </div>
+        <div class="rail-controls">
+          <button class="rail-btn" id="rail-prev" aria-label="Scroll artworks backward"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="rail-btn" id="rail-next" aria-label="Scroll artworks forward"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+        <script>
+          (function () {
+            var rail = document.getElementById("showcase-rail");
+            var prev = document.getElementById("rail-prev");
+            var next = document.getElementById("rail-next");
+            if (!rail || !prev || !next) return;
+            function step() {
+              var card = rail.querySelector(".artwork-card");
+              return card ? card.offsetWidth + 24 : 320;
+            }
+            function dir() { return document.dir === "rtl" ? -1 : 1; }
+            prev.addEventListener("click", function () { rail.scrollBy({ left: -step() * dir(), behavior: "smooth" }); });
+            next.addEventListener("click", function () { rail.scrollBy({ left: step() * dir(), behavior: "smooth" }); });
+          })();
+        </script>
       </div>
     </section>
 
