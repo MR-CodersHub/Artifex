@@ -1448,6 +1448,147 @@ textarea.form-control {
   }
 }
 
+/* --- POINTER CARDS (contact membership pointers) --- */
+.pointer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.pointer-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.pointer-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.pointer-check {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--status-success-bg);
+  color: var(--status-success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pointer-check .ic {
+  width: 22px;
+  height: 22px;
+}
+
+.pointer-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.pointer-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .pointer-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pointer-card:hover {
+    transform: none;
+  }
+}
+
+/* --- CONTACT MAP BLOCK --- */
+.map-block {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-top: 2.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.map-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-info p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.map-frame {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  min-height: 320px;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .map-block {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- HERO BACKDROP IMAGE (faded, theme-safe) --- */
+.hero.has-bg,
+.auth-side.has-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero.has-bg::after,
+.auth-side.has-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.16;
+  -webkit-mask-image: linear-gradient(180deg, black 20%, transparent 95%);
+  mask-image: linear-gradient(180deg, black 20%, transparent 95%);
+  pointer-events: none;
+}
+
+.hero.has-bg > *,
+.auth-side.has-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* --- PHILOSOPHY MANIFESTO LIST (about creative philosophy) --- */
 .manifesto-list {
   display: flex;
