@@ -210,7 +210,7 @@
     if (resetForm) {
       resetForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        window.ArtifexStore.showToast("Reset link dispatched to your email address.", "info");
+        window.ArtifexStore.showToast("Reset link dispatched to your email address.", "success");
         resetForm.reset();
       });
     }
