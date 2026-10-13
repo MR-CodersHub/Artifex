@@ -60,7 +60,7 @@ window.ArtifexData = {
       price: "$280",
       enrolled: true,
       progress: 72,
-      coverImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+      coverImage: "https://i.pinimg.com/1200x/7d/3e/0f/7d3e0f2049d1f3c3342d707a8b967c09.jpg",
       description: "Master modern digital painting workflows: from expressive gesture thumbnails and lighting temperature to intricate surface rendering and emotional focal points.",
       learningOutcomes: [
         "Construct dynamic silhouettes with anatomical grounding and expressive gesture",
@@ -176,7 +176,7 @@ window.ArtifexData = {
       price: "$220",
       enrolled: true,
       progress: 45,
-      coverImage: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
+      coverImage: "https://i.pinimg.com/736x/e5/02/c8/e502c8192e2997100daca95279f49957.jpg",
       description: "Embrace the unpredictable poetry of watercolor. Learn timing, water ratios, granulating pigments, and translucent layering for atmospheric light.",
       learningOutcomes: [
         "Master paper saturation, wet-into-wet blending, and edge timing",
@@ -205,7 +205,7 @@ window.ArtifexData = {
       price: "$260",
       enrolled: false,
       progress: 0,
-      coverImage: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80",
+      coverImage: "https://i.pinimg.com/736x/3a/4c/1f/3a4c1f03525a8e9447ec7afe4b108dfb.jpg",
       description: "Create memorable characters brimming with personality, cultural nuance, kinetic pose energy, and costume design that breathes life into stories.",
       learningOutcomes: [
         "Develop original character archetypes with distinct shape psychology",
@@ -261,7 +261,7 @@ window.ArtifexData = {
       price: "$290",
       enrolled: false,
       progress: 0,
-      coverImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+      coverImage: "https://i.pinimg.com/1200x/ff/7b/a4/ff7ba43df7d7e803487132cd897dda6d.jpg",
       description: "Learn high-end matte painting techniques, architectural worldbuilding, 3D block-in integration, and cinematic light scenarios for games and films.",
       learningOutcomes: [
         "Design believable fantastical architecture and geological formations",
@@ -701,7 +701,7 @@ window.ArtifexData = {
       date: "Oct 10, 2026",
       author: "Elena Rostova",
       authorAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
-      image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80",
+      image: "https://i.pinimg.com/1200x/f2/78/29/f278292fc0d92e1817f5e622a90f72e1.jpg",
       excerpt: "Why razor-sharp lines can ruin your painting's emotional power, and how Renaissance masters used soft transitions to create breathing room.",
       tutorialSteps: [
         { step: 1, title: "Identify Your Single Focal Pinnacle", desc: "Before rendering, determine the one point of highest contrast where edges must remain tack-sharp." },
@@ -719,7 +719,7 @@ window.ArtifexData = {
       date: "Oct 04, 2026",
       author: "Mateo Silva",
       authorAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=top&w=200&h=200&q=80",
-      image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
+      image: "https://i.pinimg.com/1200x/a5/7f/3d/a57f3d053d02c782aed03e3732a727c8.jpg",
       excerpt: "Explore how mineral pigments like cerulean, cobalt violet, and raw umber settle into the valleys of rough cold-press paper.",
       tutorialSteps: [
         { step: 1, title: "Selecting 100% Cotton Rag Paper", desc: "Cellulose paper repels heavy pigments; 300gsm cold-press cotton allows particles to settle into natural paper crevices." },
@@ -735,7 +735,7 @@ window.ArtifexData = {
       date: "Sep 27, 2026",
       author: "Suki Chen",
       authorAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&crop=top&w=200&h=200&q=80",
-      image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80",
+      image: "https://i.pinimg.com/736x/45/e5/1f/45e51f3376cf24000696cc73addea434.jpg",
       excerpt: "If your protagonist cannot be identified from pure black ink at thumbnail scale, their personality isn't reading. Here is our studio checklist.",
       tutorialSteps: [
         { step: 1, title: "The Three Sacred Shapes", desc: "Circles evoke warmth and innocence; squares imply steadfast reliability; triangles trigger kinetic danger." }
@@ -750,7 +750,7 @@ window.ArtifexData = {
       date: "Sep 19, 2026",
       author: "Julian Vance",
       authorAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
-      image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80",
+      image: "https://i.pinimg.com/1200x/02/0c/32/020c325f7888bf6156c9d75843bd8656.jpg",
       excerpt: "Forget Latin medical terms. Master the 7 key bony landmarks that never change regardless of muscle mass or body shape.",
       tutorialSteps: [
         { step: 1, title: "The Clavicular Bow and Sternum", desc: "Anchor the neck and ribcage tilt immediately before sketching arms." }
@@ -765,7 +765,7 @@ window.ArtifexData = {
       date: "Sep 12, 2026",
       author: "Elena Rostova",
       authorAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+      image: "https://i.pinimg.com/736x/be/27/cc/be27ccfce59620606c73d415be5c431f.jpg",
       excerpt: "How atmospheric density, haze, and light scattering turn flat landscapes into vast, cinematic worlds.",
       tutorialSteps: [
         { step: 1, title: "Foreground, Midground, Sky Planes", desc: "Establishing strict value steps from 10% black in the foreground to 85% ambient haze at the horizon." }
@@ -780,10 +780,27 @@ window.ArtifexData = {
       date: "Aug 30, 2026",
       author: "Chloe Dubois",
       authorAvatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
-      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80",
+      image: "https://i.pinimg.com/736x/78/21/ad/7821adcf3ed31f160c4ab4361af67997.jpg",
       excerpt: "Why the prettiest sketchbooks are often the most restrictive, and how collage and ink splatters bring liberation.",
       tutorialSteps: [
         { step: 1, title: "Stain the First Page", desc: "Spill coffee, splatter walnut ink, or paste a train ticket before drawing a single line." }
+      ]
+    },
+    {
+      id: "post_7",
+      title: "Digital Brushes Demystified: Texture, Flow vs Opacity",
+      slug: "digital-brushes-demystified",
+      category: "Digital Illustration",
+      readTime: "6 min read",
+      date: "Aug 14, 2026",
+      author: "Elena Rostova",
+      authorAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&w=200&h=200&q=80",
+      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+      excerpt: "Stop collecting 5,000 brushes. Discover the 4 core brush dynamics that professional concept artists rely on.",
+      tutorialSteps: [
+        { step: 1, title: "Flow Versus Opacity", desc: "Flow controls how much paint lands per stroke pass; opacity caps total transparency. Professionals ride flow for gradual build-up." },
+        { step: 2, title: "The Four Core Dynamics", desc: "Size jitter, opacity jitter, texture grain, and edge hardness cover ninety percent of studio rendering work." },
+        { step: 3, title: "The One-Brush Challenge", desc: "Paint a complete study with a single round brush to master pressure control before expanding your library." }
       ]
     }
   ],

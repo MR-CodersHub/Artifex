@@ -1589,6 +1589,20 @@ textarea.form-control {
   z-index: 1;
 }
 
+/* --- FEATURED ARTICLE CARD (blog) --- */
+#featured-article .card-media {
+  min-height: 280px;
+}
+
+@media (max-width: 820px) {
+  #featured-article .card {
+    grid-template-columns: 1fr !important;
+  }
+  #featured-article .card-media {
+    min-height: 240px;
+  }
+}
+
 /* --- PHILOSOPHY MANIFESTO LIST (about creative philosophy) --- */
 .manifesto-list {
   display: flex;
