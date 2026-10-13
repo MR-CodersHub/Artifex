@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="afx-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FB7A5A"/>
+      <stop offset="1" stop-color="#E85A36"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#afx-bg)"/>
+  <!-- atelier easel -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="20" y="8" width="24" height="19" rx="4"/>
+    <path d="M24 27 L15 56 M40 27 L49 56 M32 27 V56"/>
+  </g>
+</svg>

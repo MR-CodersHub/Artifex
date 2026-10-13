@@ -1,0 +1,160 @@
+/* ==========================================================================
+   ARTIFEX ACADEMY — DESIGN SYSTEM & TOKENS
+   Awwwards / Behance-quality Editorial Art School Aesthetic
+   ========================================================================== */
+
+:root {
+  /* Editorial Palette: Warm Ivory, Ink Black, Cobalt Blue, Coral, Sage, Lavender, Peach */
+  --bg-primary: #FAF7F2;
+  --bg-surface: #FFFFFF;
+  --bg-secondary: #F3ECE2;
+  --bg-tertiary: #EBE3D7;
+  --bg-card: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  
+  --text-primary: #141416;
+  --text-secondary: #585A66;
+  --text-muted: #8E91A0;
+  --text-inverse: #FAF7F2;
+
+  --border-light: rgba(20, 20, 22, 0.08);
+  --border-medium: rgba(20, 20, 22, 0.16);
+  --border-strong: rgba(20, 20, 22, 0.32);
+
+  /* Expressive Accent Colors */
+  --color-cobalt: #1E40AF;
+  --color-cobalt-light: #DBEAFE;
+  --color-cobalt-hover: #1D4ED8;
+  
+  --color-coral: #F97352;
+  --color-coral-light: #FFEDE9;
+  --color-coral-hover: #E85A36;
+
+  --color-sage: #4E7D63;
+  --color-sage-light: #E4ECE6;
+
+  --color-lavender: #7C3AED;
+  --color-lavender-light: #EDE9FE;
+
+  --color-peach: #F59E0B;
+  --color-peach-light: #FEF3C7;
+
+  --color-ink: #141416;
+  --color-gold: #D97706;
+
+  /* Semantic status colors */
+  --status-success: #15803D;
+  --status-success-bg: #DCFCE7;
+  --status-warning: #B45309;
+  --status-warning-bg: #FEF3C7;
+  --status-danger: #B91C1C;
+  --status-danger-bg: #FEE2E2;
+  --status-info: #1D4ED8;
+  --status-info-bg: #DBEAFE;
+
+  /* Typography */
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, "Segoe UI", serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(20, 20, 22, 0.04);
+  --shadow-md: 0 8px 24px rgba(20, 20, 22, 0.08);
+  --shadow-lg: 0 16px 40px rgba(20, 20, 22, 0.12);
+  --shadow-xl: 0 24px 60px rgba(20, 20, 22, 0.16);
+  --shadow-artistic: 6px 6px 0px var(--color-ink);
+
+  /* Radius */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 480ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-max: 1280px;
+  --container-narrow: 940px;
+  --container-wide: 1440px;
+  --header-height: 80px;
+
+  /* Directional flow (LTR default) */
+  --dir-factor: 1;
+  --transform-arrow: none;
+}
+
+/* ==========================================================================
+   DARK MODE
+   Deep Inky Obsidian with Glowing Painterly Accents
+   ========================================================================== */
+[data-theme="dark"] {
+  --bg-primary: #0C0D10;
+  --bg-surface: #14161C;
+  --bg-secondary: #1A1D24;
+  --bg-tertiary: #232732;
+  --bg-card: #161922;
+  --bg-glass: rgba(22, 25, 34, 0.85);
+
+  --text-primary: #F7F7F8;
+  --text-secondary: #A6AAB8;
+  --text-muted: #6C7080;
+  --text-inverse: #101115;
+
+  --border-light: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.28);
+
+  --color-cobalt: #3B82F6;
+  --color-cobalt-light: rgba(59, 130, 246, 0.18);
+  --color-cobalt-hover: #60A5FA;
+
+  --color-coral: #FB7A5A;
+  --color-coral-light: rgba(249, 115, 82, 0.18);
+  --color-coral-hover: #FC9278;
+
+  --color-sage: #5EA87E;
+  --color-sage-light: rgba(94, 168, 126, 0.18);
+
+  --color-lavender: #A78BFA;
+  --color-lavender-light: rgba(167, 139, 250, 0.18);
+
+  --color-peach: #FBBF24;
+  --color-peach-light: rgba(251, 191, 36, 0.18);
+
+  --color-ink: #FAF7F2;
+
+  --status-success: #4ADE80;
+  --status-success-bg: rgba(74, 222, 128, 0.15);
+  --status-warning: #FBBF24;
+  --status-warning-bg: rgba(251, 191, 36, 0.15);
+  --status-danger: #F87171;
+  --status-danger-bg: rgba(248, 113, 113, 0.15);
+  --status-info: #60A5FA;
+  --status-info-bg: rgba(96, 165, 250, 0.15);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.7);
+  --shadow-artistic: 6px 6px 0px rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   RTL SUPPORT
+   ========================================================================== */
+[dir="rtl"] {
+  --dir-factor: -1;
+  --transform-arrow: scaleX(-1);
+  text-align: right;
+}
+
+[dir="rtl"] .icon-arrow,
+[dir="rtl"] .arrow-next {
+  transform: scaleX(-1);
+}

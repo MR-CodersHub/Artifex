@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97352">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Student Login — Artifex Academy</title>
+  <meta name="description" content="Sign in to Artifex Academy. Resume video lessons, upload assignments, review instructor draw-overs, and connect with fellow illustrators.">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+  <!-- MINIMAL TOP BAR (brand + theme controls, no nav, no footer) -->
+  <header class="minimal-topbar">
+    <div class="container minimal-topbar-container">
+      <a href="../index.html" class="brand-logo" aria-label="Artifex Academy Home">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </a>
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="action-icon-btn btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <!-- RTL Toggle -->
+        <button class="action-icon-btn btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction">LTR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT: AUTH FORMS -->
+  <main id="main-content">
+
+    <!-- LOGIN FORM -->
+    <section id="login-form-section" class="section">
+      <div class="container-narrow">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--cobalt">Returning Artists</span>
+          <h2>Sign In to Your Student Account</h2>
+        </div>
+
+        <div class="form-card" style="max-width:540px;margin-inline:auto;">
+          <form id="form-login" class="form-grid" novalidate>
+            <div class="form-group form-full">
+              <label class="form-label" for="login-email">Student Email</label>
+              <input type="email" id="login-email" class="form-control" value="aurora.sterling@studio.artifex.com" required>
+            </div>
+
+            <div class="form-group form-full">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <label class="form-label" for="login-password">Password</label>
+                <a href="#reset-password-section" style="font-size:0.8rem;color:var(--color-coral);">Forgot Password?</a>
+              </div>
+              <input type="password" id="login-password" class="form-control" value="••••••••••••" required>
+            </div>
+
+            <div class="form-full" style="display:flex;align-items:center;justify-content:space-between;">
+              <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;cursor:pointer;">
+                <input type="checkbox" checked>
+                <span>Remember Atelier Session</span>
+              </label>
+            </div>
+
+            <div class="form-full" style="margin-top:0.75rem;">
+              <button type="submit" class="btn btn-coral btn-lg" style="width:100%;">
+                Sign In to Studio Portal →
+              </button>
+            </div>
+          </form>
+          <p style="text-align:center;margin-top:1.25rem;font-size:0.9rem;color:var(--text-secondary);">
+            New to Artifex?
+            <a href="signup.html" style="color:var(--color-coral);font-weight:700;">Create a student account →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PASSWORD RESET -->
+    <section id="reset-password-section" class="section section--alt">
+      <div class="container-narrow">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--lavender">Account Recovery</span>
+          <h2>Reset Your Password</h2>
+          <p class="section-subtitle">
+            Enter your student email and we'll dispatch a secure recovery link to reset your studio pass.
+          </p>
+        </div>
+
+        <div class="form-card" style="max-width:520px;margin-inline:auto;">
+          <form id="form-reset-password" class="form-grid">
+            <div class="form-group form-full">
+              <label class="form-label" for="reset-email">Registered Email Address</label>
+              <input type="email" id="reset-email" class="form-control" placeholder="your.name@studio.com" required>
+            </div>
+
+            <div class="form-full">
+              <button type="submit" class="btn btn-outline btn-lg" style="width:100%;">
+                Send Password Reset Link
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="../js/data.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages.js"></script>
+</body>
+</html>

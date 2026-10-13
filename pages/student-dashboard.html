@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97352">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Student Learning Dashboard — Artifex Academy</title>
+  <meta name="description" content="Artifex Student Portal: Track courses, watch video modules, submit artwork assignments, inspect instructor critiques, and manage subscriptions.">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <!-- Corner toggles (theme + direction, fixed top-right) -->
+  <div class="dash-corner-toggles">
+    <button class="toggle-pill toggle-icon-only btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+    <button class="toggle-pill btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction"><span>LTR</span></button>
+  </div>
+
+  <!-- DASHBOARD APPLICATION LAYOUT (no top bar; sidebar only) -->
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="dashboard-sidebar" aria-label="Student Navigation">
+      <a href="../index.html" class="brand-logo sidebar-brand" aria-label="Artifex Academy Home">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </a>
+      <div class="sidebar-user-card">
+        <img class="sidebar-avatar user-display-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Student Profile">
+        <div class="sidebar-user-meta">
+          <span class="sidebar-user-name user-display-name">Aurora Sterling</span>
+          <span class="sidebar-user-role user-display-plan">All-Access Atelier</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="sidebar-nav-item active" data-tab="overview">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></span>
+          <span>Overview</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="courses">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span>
+          <span>My Courses</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="modules">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2.5"/></svg></span>
+          <span>Course Modules</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="assignments">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+          <span>Assignments</span>
+          <span class="sidebar-nav-badge" id="badge-assignments">2</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="feedback">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg></span>
+          <span>Instructor Feedback</span>
+          <span class="sidebar-nav-badge" style="background:var(--color-cobalt);" id="badge-feedback">1</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="artwork">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></span>
+          <span>Student Artwork</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="billing">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="4.5" width="21" height="15" rx="2.5"/><path d="M1.5 10h21"/></svg></span>
+          <span>Subscription &amp; Payments</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="notifications">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
+          <span>Notifications</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="profile">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+          <span>Profile &amp; Settings</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="help">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
+          <span>Help &amp; Support</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="sidebar-nav-item" data-tab="logout" style="color:var(--status-danger);width:100%;">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg></span>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT AREA -->
+    <main class="dashboard-main">
+
+      <!-- TAB 1: OVERVIEW -->
+      <section id="tab-overview" class="dashboard-tab-panel active">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Welcome back, <span class="user-display-name">Aurora</span>! <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2.2 4 2.2 4-2.2 4-2.2"/><path d="M9 9h.01M15 9h.01"/></svg></h1>
+            <p style="color:var(--text-secondary);">Your studio journey continues. You have 1 unread instructor draw-over critique waiting.</p>
+          </div>
+          <div>
+            <span class="badge badge-coral">Atelier Term 2026</span>
+          </div>
+        </div>
+
+        <!-- CONTINUE LEARNING HERO CARD -->
+        <div class="continue-card">
+          <div>
+            <span class="continue-badge">Continue Learning</span>
+            <h2 class="continue-title">Digital Illustration Masterclass</h2>
+            <p class="continue-lesson">Next Up: <strong>Lesson 3.3 — Atmospheric Perspective: Golden Hour to Twilight</strong></p>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 72%;"></div>
+            </div>
+            <span style="font-size:0.8rem;color:#D1D4DF;display:block;margin-top:0.25rem;">Overall Course Progress: 72% Complete (26 of 36 Lessons)</span>
+          </div>
+          <div>
+            <button class="btn btn-coral btn-lg" data-switch-tab="modules">
+              <span>Resume Course</span>
+              <span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="currentColor" stroke="none"/></svg></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- METRIC CARDS -->
+        <div class="overview-stats-grid">
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Enrolled Courses</span>
+              <span class="metric-icon" style="background:var(--color-cobalt-light);color:var(--color-cobalt);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span>
+            </div>
+            <span class="metric-value">3</span>
+            <span class="metric-sub">2 In Progress • 1 Completed</span>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Overall Progress</span>
+              <span class="metric-icon" style="background:var(--color-coral-light);color:var(--color-coral);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span>
+            </div>
+            <span class="metric-value" id="stat-overall-progress">68%</span>
+            <span class="metric-sub">42 of 62 Assigned Lessons</span>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Pending Assignments</span>
+              <span class="metric-icon" style="background:var(--color-peach-light);color:var(--color-peach);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+            </div>
+            <span class="metric-value" id="stat-pending-assignments">2</span>
+            <span class="metric-sub">1 Under Review • 1 Due Soon</span>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Unread Critiques</span>
+              <span class="metric-icon" style="background:var(--color-lavender-light);color:var(--color-lavender);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="8.3" cy="10.2" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="7.6" r="1.3" fill="currentColor" stroke="none"/><circle cx="15.7" cy="10.2" r="1.3" fill="currentColor" stroke="none"/></svg></span>
+            </div>
+            <span class="metric-value" id="stat-unread-feedback">1</span>
+            <span class="metric-sub">From Elena Rostova</span>
+          </div>
+        </div>
+
+        <!-- RECENT ACTIVITY GRID -->
+        <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:2rem;">
+          <div class="card" style="padding:1.75rem;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
+              <h3 style="font-size:1.25rem;">Recent Studio Tasks</h3>
+              <button class="btn btn-sm btn-outline" data-switch-tab="assignments">View All</button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:0.75rem;border-radius:var(--radius-md);background:var(--bg-secondary);">
+                <div>
+                  <strong style="font-size:0.95rem;display:block;">Hero Silhouette &amp; 3 Color Variations</strong>
+                  <span style="font-size:0.8rem;color:var(--text-muted);">Digital Illustration • Module 2</span>
+                </div>
+                <span class="status-badge status-badge--feedback">Feedback Available</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:0.75rem;border-radius:var(--radius-md);background:var(--bg-secondary);">
+                <div>
+                  <strong style="font-size:0.95rem;display:block;">Wet-on-Wet Gradient &amp; Swatches</strong>
+                  <span style="font-size:0.8rem;color:var(--text-muted);">Luminous Watercolors • Module 1</span>
+                </div>
+                <span class="status-badge status-badge--revision">Revision Requested</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:1.75rem;">
+            <h3 style="font-size:1.25rem;margin-bottom:1rem;">Membership Status</h3>
+            <div style="padding:1rem;border-radius:var(--radius-md);background:var(--color-sage-light);color:var(--color-sage);margin-bottom:1rem;">
+              <strong>All-Access Atelier Pass</strong>
+              <p style="font-size:0.85rem;margin-top:0.25rem;">Active until Dec 14, 2026</p>
+            </div>
+            <button class="btn btn-outline btn-sm" style="width:100%;" data-switch-tab="billing">
+              Manage Membership &amp; Invoices
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: MY COURSES -->
+      <section id="tab-courses" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">My Enrolled Courses</h1>
+            <p style="color:var(--text-secondary);">Access your studio curricula, track completed modules, and resume lessons.</p>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <a href="services.html" class="btn btn-primary btn-sm">+ Browse Course Catalog</a>
+          </div>
+        </div>
+
+        <div id="my-courses-grid" class="courses-grid">
+          <!-- Dynamically populated by dashboard.js -->
+        </div>
+      </section>
+
+      <!-- TAB 3: COURSE LEARNING EXPERIENCE / MODULES PLAYER -->
+      <section id="tab-modules" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <span class="badge badge-coral" style="margin-bottom:0.5rem;">Interactive Learning Player</span>
+            <h1 class="dashboard-view-title">Digital Illustration Masterclass</h1>
+            <p style="color:var(--text-secondary);">Instructor: Elena Rostova • 12 Weeks • 36 Lessons</p>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <button id="btn-complete-lesson" class="btn btn-primary btn-sm">Mark as Completed</button>
+          </div>
+        </div>
+
+        <!-- PLAYER CONTAINER -->
+        <div class="course-player-container">
+          <div class="player-main-view">
+            <!-- Simulated Video Canvas / Screen -->
+            <div class="player-screen">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" alt="Video stream poster">
+              <div class="player-controls-overlay">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <span class="badge badge-coral">HD 1080p Studio Stream</span>
+                  <span style="color:#FFFFFF;font-size:0.85rem;background:rgba(0,0,0,0.6);padding:0.2rem 0.5rem;border-radius:4px;">Elena Rostova Atelier</span>
+                </div>
+                <button id="player-toggle-btn" class="player-center-play-btn" aria-label="Play Lesson Video"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="currentColor" stroke="none"/></svg></button>
+                <div class="player-bottom-bar">
+                  <span>04:12 / 50:18</span>
+                  <div style="display:flex;gap:1rem;font-size:0.85rem;">
+                    <span>Speed: 1.0x</span>
+                    <span>Subtitles: CC [EN]</span>
+                    <span>Volume: 100%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Player Meta & Resources -->
+            <div class="player-meta-info">
+              <h2 id="player-active-title" class="player-lesson-title">3.3 Atmospheric Perspective: Golden Hour to Twilight</h2>
+              <p id="player-active-desc" class="player-lesson-desc">
+                In this deep-dive studio demonstration with Elena Rostova, we break down core principles of color scattering across three depth planes. Watch each brush pass carefully, and prepare your sketchbook for the accompanying practical exercise.
+              </p>
+
+              <div style="display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap;">
+                <button class="btn btn-outline btn-sm" onclick="window.ArtifexStore.showToast('Downloading Elena_Color_Gamut_Brushes.abr (14MB)...', 'info')">
+                  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 5.1L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.8 4H7.2a2 2 0 0 0-1.7 1.1z"/></svg> Download Lesson Brushes (.ABR)
+                </button>
+                <button class="btn btn-outline btn-sm" onclick="window.ArtifexStore.showToast('Downloading Lesson_3_3_HighRes_ReferencePack.zip (85MB)...', 'info')">
+                  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 5.1L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.8 4H7.2a2 2 0 0 0-1.7 1.1z"/></svg> Download Photo References (.ZIP)
+                </button>
+                <button class="btn btn-coral btn-sm" data-switch-tab="assignments">
+                  Go to Related Assignment →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modules Sidebar Navigator -->
+          <div class="module-navigator">
+            <div class="module-navigator-header">
+              <span>Course Curriculum (6 Modules)</span>
+            </div>
+            <div id="module-navigator-list">
+              <!-- Dynamically populated by dashboard.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: ASSIGNMENTS -->
+      <section id="tab-assignments" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Artwork Assignments</h1>
+            <p style="color:var(--text-secondary);">Submit practical exercises, track review statuses, and review mentor draw-overs.</p>
+          </div>
+          <div>
+            <span class="badge badge-sage">Allowed formats: PNG, JPG, TIFF, PSD</span>
+          </div>
+        </div>
+
+        <div id="assignments-container" class="assignments-list">
+          <!-- Dynamically populated by dashboard.js -->
+        </div>
+      </section>
+
+      <!-- TAB 5: INSTRUCTOR FEEDBACK -->
+      <section id="tab-feedback" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Instructor Feedback &amp; Draw-Overs</h1>
+            <p style="color:var(--text-secondary);">Constructive visual draw-overs, recorded critique notes, and actionable improvement suggestions.</p>
+          </div>
+        </div>
+
+        <div id="feedbacks-container">
+          <!-- Dynamically populated by dashboard.js -->
+        </div>
+      </section>
+
+      <!-- TAB 6: STUDENT ARTWORK PORTFOLIO -->
+      <section id="tab-artwork" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">My Artwork Portfolio</h1>
+            <p style="color:var(--text-secondary);">Curate your submitted artworks and manage their visibility on the public student showcase gallery.</p>
+          </div>
+          <div>
+            <button class="btn btn-sm btn-coral" data-switch-tab="assignments">+ Submit New Artwork</button>
+          </div>
+        </div>
+
+        <div id="student-artwork-grid" class="gallery-grid">
+          <!-- Dynamically populated by dashboard.js -->
+        </div>
+      </section>
+
+      <!-- TAB 7: SUBSCRIPTION & PAYMENTS -->
+      <section id="tab-billing" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Subscription &amp; Payments</h1>
+            <p style="color:var(--text-secondary);">Manage your Atelier membership plan, billing cycle, and invoice history.</p>
+          </div>
+        </div>
+
+        <!-- Simulated Demo Billing Notice -->
+        <div class="billing-demo-notice">
+          <span style="font-size:1.25rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 16v-4M12 8h.01"/></svg></span>
+          <div>
+            <strong>Interactive Simulation Mode:</strong>
+            <span> This is a demonstration student dashboard. No actual payment card charges are processed.</span>
+          </div>
+        </div>
+
+        <div class="billing-card">
+          <div class="billing-plan-row">
+            <div>
+              <span class="badge badge-coral" style="margin-bottom:0.5rem;">Current Membership</span>
+              <h2 style="font-size:1.75rem;" class="user-display-plan">All-Access Atelier</h2>
+              <p style="font-size:0.9rem;color:var(--text-secondary);margin-top:0.25rem;">
+                Billing Interval: <strong>Monthly ($49.00 / mo)</strong> • Next Billing Date: <strong>Nov 14, 2026</strong>
+              </p>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem;">
+                Status: <strong id="user-plan-status" style="color:var(--status-success);">Active (Auto-renewing)</strong>
+              </p>
+            </div>
+            <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+              <button id="btn-upgrade-subscription" class="btn btn-cobalt btn-sm">Upgrade to Mentorship</button>
+              <button id="btn-cancel-subscription" class="btn btn-outline btn-sm" style="color:var(--status-danger);border-color:var(--status-danger);">
+                Cancel Membership
+              </button>
+            </div>
+          </div>
+
+          <h3 style="font-size:1.2rem;margin-bottom:1rem;">Payment &amp; Invoice History</h3>
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Invoice No</th>
+                  <th>Date</th>
+                  <th>Plan</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Receipt</th>
+                </tr>
+              </thead>
+              <tbody id="billing-invoices-body">
+                <!-- Dynamically populated by dashboard.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 8: NOTIFICATIONS -->
+      <section id="tab-notifications" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Atelier Notifications</h1>
+            <p style="color:var(--text-secondary);">Feedback alerts, assignment deadlines, and faculty announcements.</p>
+          </div>
+          <div>
+            <button id="btn-mark-all-read" class="btn btn-outline btn-sm">Mark All as Read</button>
+          </div>
+        </div>
+
+        <div id="notifications-list" style="max-width:800px;">
+          <!-- Dynamically populated by dashboard.js -->
+        </div>
+      </section>
+
+      <!-- TAB 9: PROFILE & SETTINGS -->
+      <section id="tab-profile" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Student Profile &amp; Settings</h1>
+            <p style="color:var(--text-secondary);">Update your display details, primary artistic mediums, and account preferences.</p>
+          </div>
+        </div>
+
+        <div class="form-card" style="max-width:800px;">
+          <form id="student-profile-form" class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="profile-name">Student Name</label>
+              <input type="text" id="profile-name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="profile-email">Email Address</label>
+              <input type="email" id="profile-email" class="form-control" required>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="profile-medium">Preferred Art Mediums</label>
+              <input type="text" id="profile-medium" class="form-control" placeholder="e.g. Digital Illustration, Watercolor">
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="profile-bio">Artist Statement / Bio</label>
+              <textarea id="profile-bio" class="form-control" style="min-height:90px;"></textarea>
+            </div>
+            <div class="form-full" style="text-align:right;">
+              <button type="submit" class="btn btn-coral">Save Profile Changes</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- TAB 10: HELP & SUPPORT -->
+      <section id="tab-help" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Atelier Help &amp; Support</h1>
+            <p style="color:var(--text-secondary);">Need assistance with an assignment upload, playback, or account question?</p>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <h3>Admissions &amp; Academic Help</h3>
+            <p>Connect with a mentor or student advisor regarding assignment deadlines or coursework.</p>
+            <a href="contact.html" class="btn btn-sm btn-outline" style="margin-top:auto;">Contact Advisor</a>
+          </div>
+          <div class="feature-box">
+            <h3>Discord Studio Guild</h3>
+            <p>Join over 14,000 active art students in our 24/7 community voice and critique rooms.</p>
+            <button class="btn btn-sm btn-cobalt" style="margin-top:auto;" onclick="window.ArtifexStore.showToast('Opening Artifex Discord Guild invite...', 'info')">Join Guild</button>
+          </div>
+          <div class="feature-box">
+            <h3>Technical Support</h3>
+            <p>Experiencing streaming or upload issues? Email our support engineers.</p>
+            <span style="font-size:0.85rem;color:var(--text-muted);display:block;margin-top:auto;">studentdesk@artifexacademy.com</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ASSIGNMENT SUBMIT MODAL (WITH REAL IMAGE PREVIEW VIA FILEREADER) -->
+  <div id="artifex-submit-modal" class="submit-modal-backdrop" role="dialog" aria-modal="true" aria-label="Submit Artwork Modal">
+    <div class="submit-modal">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
+        <div>
+          <h3 style="font-size:1.35rem;" id="submit-assignment-title">Submit Artwork</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);" id="submit-assignment-module">Module Assignment</p>
+        </div>
+        <button id="close-submit-modal" class="action-icon-btn" aria-label="Close">&times;</button>
+      </div>
+
+      <form id="assignment-submit-form">
+        <input type="hidden" id="submit-assignment-id" value="">
+
+        <!-- Drag & Drop Zone -->
+        <div id="assignment-dropzone" class="file-dropzone">
+          <div style="font-size:2.5rem;margin-bottom:0.5rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="8.3" cy="10.2" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="7.6" r="1.3" fill="currentColor" stroke="none"/><circle cx="15.7" cy="10.2" r="1.3" fill="currentColor" stroke="none"/></svg></div>
+          <strong style="display:block;margin-bottom:0.25rem;">Drag &amp; Drop your Artwork File here</strong>
+          <span style="font-size:0.85rem;color:var(--text-muted);display:block;margin-bottom:1rem;">or click to browse from your computer</span>
+          <span class="badge badge-outline">PNG, JPG, TIFF, PSD up to 50MB</span>
+          <input type="file" id="assignment-file-input" accept="image/*" style="display:none;">
+        </div>
+
+        <!-- Real Image Preview -->
+        <div id="assignment-preview-container" class="file-dropzone-preview">
+          <img id="assignment-preview-img" src="" alt="Submission Preview">
+          <p style="font-size:0.8rem;color:var(--status-success);text-align:center;margin-top:0.5rem;">✓ File attached and ready for critique</p>
+        </div>
+
+        <div class="form-group" style="margin-top:1.25rem;">
+          <label class="form-label" for="assignment-notes">Artist's Notes &amp; Questions for Instructor</label>
+          <textarea id="assignment-notes" class="form-control" style="min-height:90px;" placeholder="Explain your design intentions, color decisions, or specific areas where you need guidance..."></textarea>
+        </div>
+
+        <div style="display:flex;gap:1rem;justify-content:flex-end;margin-top:1.5rem;">
+          <button type="button" class="btn btn-outline" onclick="document.getElementById('artifex-submit-modal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="btn btn-coral">Submit Artwork for Review →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="../js/data.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

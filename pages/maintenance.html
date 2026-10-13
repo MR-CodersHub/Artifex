@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97352">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Maintenance &amp; Atelier Expansion — Artifex Academy</title>
+  <meta name="description" content="Artifex Atelier 2.0 is currently brewing in our studios. Real-time critique streams, 3D anatomy models, and mobile apps launching soon.">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <style>
+    /* Maintenance vector-art scene (scoped) */
+    .mnt-art {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1rem, 3vw, 2rem);
+      position: relative;
+      overflow: hidden;
+    }
+    .mnt-art svg { display: block; width: 100%; height: auto; }
+    .mnt-spin { transform-box: fill-box; transform-origin: center; animation: mnt-spin 26s linear infinite; }
+    .mnt-spin-rev { transform-box: fill-box; transform-origin: center; animation: mnt-spin-rev 34s linear infinite; }
+    .mnt-float { animation: mnt-float 5s ease-in-out infinite; }
+    .mnt-float-2 { animation: mnt-float 6.5s ease-in-out 1.2s infinite; }
+    .mnt-pulse { transform-box: fill-box; transform-origin: center; animation: mnt-pulse 3.2s ease-in-out infinite; }
+    @keyframes mnt-spin { to { transform: rotate(360deg); } }
+    @keyframes mnt-spin-rev { to { transform: rotate(-360deg); } }
+    @keyframes mnt-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    @keyframes mnt-pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.25); opacity: 0.65; } }
+    @media (prefers-reduced-motion: reduce) {
+      .mnt-spin, .mnt-spin-rev, .mnt-float, .mnt-float-2, .mnt-pulse { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MINIMAL TOP BAR (brand + theme controls, no nav, no footer) -->
+  <header class="minimal-topbar">
+    <div class="container minimal-topbar-container">
+      <a href="../index.html" class="brand-logo" aria-label="Artifex Academy Home">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </a>
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="action-icon-btn btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <!-- RTL Toggle -->
+        <button class="action-icon-btn btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction">LTR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT: EXACTLY 6 SECTIONS -->
+  <main id="main-content">
+
+    <!-- SECTION 1: HERO -->
+    <section id="cs-hero" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag section-tag--coral">Scheduled Maintenance</span>
+          <h1 class="hero-title">
+            The Atelier Is <span class="font-serif">Under the Brush.</span>
+          </h1>
+          <p class="hero-desc">
+            We're giving the studio a fresh coat — tuning the gears behind Artifex Atelier 2.0 with real-time collaboration canvases, live draw-over stages, and 3D anatomy models. Everything you love stays open while we paint.
+          </p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="#countdown-section" class="btn btn-coral">View Launch Countdown ↓</a>
+            <a href="#notify-section" class="btn btn-outline">Get Notified on Launch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="mnt-art" role="img" aria-label="Vector illustration of an artist easel being repaired with gears, wrench, paintbrush and traffic cone">
+            <svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- backdrop blob -->
+              <path d="M90 90 C 200 20, 430 30, 530 110 C 620 180, 600 360, 480 430 C 360 500, 150 490, 80 390 C 20 300, 10 160, 90 90 Z"
+                fill="var(--color-cobalt-light)" opacity="0.55"/>
+              <!-- dashed orbit ring -->
+              <circle cx="470" cy="150" r="105" fill="none" stroke="var(--color-coral)" stroke-width="3"
+                stroke-dasharray="10 12" stroke-linecap="round" opacity="0.55"/>
+              <!-- dotted texture -->
+              <g fill="var(--color-lavender)" opacity="0.5">
+                <circle cx="70" cy="120" r="5"/><circle cx="100" cy="120" r="5"/><circle cx="130" cy="120" r="5"/>
+                <circle cx="70" cy="150" r="5"/><circle cx="100" cy="150" r="5"/><circle cx="130" cy="150" r="5"/>
+                <circle cx="70" cy="180" r="5"/><circle cx="100" cy="180" r="5"/><circle cx="130" cy="180" r="5"/>
+              </g>
+              <!-- ground shadow -->
+              <ellipse cx="300" cy="468" rx="215" ry="26" fill="var(--border-medium)"/>
+
+              <!-- big gear (spinning) -->
+              <g class="mnt-spin">
+                <g transform="translate(470,150)">
+                  <g fill="var(--color-coral)">
+                    <rect x="-13" y="-88" width="26" height="30" rx="7"/>
+                    <rect x="-13" y="-88" width="26" height="30" rx="7" transform="rotate(45)"/>
+                    <rect x="-13" y="-88" width="26" height="30" rx="7" transform="rotate(90)"/>
+                    <rect x="-13" y="-88" width="26" height="30" rx="7" transform="rotate(135)"/>
+                    <rect x="-13" y="-88" width="26" height="30" rx="7" transform="rotate(180)"/>
+                    <rect x="-13" y="-88" width="26" height="30" rx="7" transform="rotate(225)"/>
+                    <rect x="-13" y="-88" width="26" height="30" rx="7" transform="rotate(270)"/>
+                    <rect x="-13" y="-88" width="26" height="30" rx="7" transform="rotate(315)"/>
+                  </g>
+                  <circle r="62" fill="var(--color-coral)"/>
+                  <circle r="34" fill="var(--bg-surface)" stroke="var(--border-medium)" stroke-width="2"/>
+                  <circle r="10" fill="var(--color-cobalt)"/>
+                </g>
+              </g>
+              <!-- small gear (counter-spinning) -->
+              <g class="mnt-spin-rev">
+                <g transform="translate(128,392)">
+                  <g fill="var(--color-peach)">
+                    <rect x="-9" y="-58" width="18" height="20" rx="5"/>
+                    <rect x="-9" y="-58" width="18" height="20" rx="5" transform="rotate(60)"/>
+                    <rect x="-9" y="-58" width="18" height="20" rx="5" transform="rotate(120)"/>
+                    <rect x="-9" y="-58" width="18" height="20" rx="5" transform="rotate(180)"/>
+                    <rect x="-9" y="-58" width="18" height="20" rx="5" transform="rotate(240)"/>
+                    <rect x="-9" y="-58" width="18" height="20" rx="5" transform="rotate(300)"/>
+                  </g>
+                  <circle r="41" fill="var(--color-peach)"/>
+                  <circle r="20" fill="var(--bg-surface)" stroke="var(--border-medium)" stroke-width="2"/>
+                  <circle r="7" fill="var(--color-coral)"/>
+                </g>
+              </g>
+
+              <!-- easel legs -->
+              <g stroke="#A67C52" stroke-width="16" stroke-linecap="round">
+                <line x1="230" y1="170" x2="180" y2="455"/>
+                <line x1="370" y1="170" x2="420" y2="455"/>
+                <line x1="300" y1="180" x2="300" y2="455"/>
+              </g>
+              <!-- easel crossbar + tray -->
+              <rect x="195" y="330" width="210" height="18" rx="9" fill="#8A6540"/>
+              <rect x="235" y="400" width="130" height="16" rx="8" fill="#8A6540"/>
+              <!-- paint jars on tray -->
+              <rect x="252" y="372" width="26" height="30" rx="6" fill="var(--color-cobalt)"/>
+              <rect x="284" y="366" width="26" height="36" rx="6" fill="var(--color-coral)"/>
+              <rect x="316" y="374" width="26" height="28" rx="6" fill="var(--color-sage)"/>
+
+              <!-- canvas -->
+              <g>
+                <rect x="200" y="120" width="200" height="190" rx="14" fill="var(--bg-surface)"
+                  stroke="var(--color-ink)" stroke-width="5"/>
+                <rect x="200" y="120" width="200" height="190" rx="14" fill="none"
+                  stroke="var(--color-coral)" stroke-width="2" stroke-dasharray="2 10" opacity="0.6"/>
+                <!-- painted strokes -->
+                <path d="M222 190 C 260 160, 300 220, 340 180 S 372 200, 380 188" fill="none"
+                  stroke="var(--color-cobalt)" stroke-width="13" stroke-linecap="round"/>
+                <path d="M222 225 C 270 210, 310 245, 378 220" fill="none"
+                  stroke="var(--color-sage)" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+                <path d="M228 258 C 280 250, 330 268, 372 254" fill="none"
+                  stroke="var(--color-lavender)" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+                <!-- version badge -->
+                <g transform="translate(368,142)">
+                  <circle r="30" fill="var(--color-coral)"/>
+                  <text text-anchor="middle" dy="9" font-size="24" font-weight="800" fill="#fff"
+                    font-family="Plus Jakarta Sans, Segoe UI, sans-serif">2.0</text>
+                </g>
+                <!-- wet-paint star -->
+                <g class="mnt-pulse" transform="translate(232,148)">
+                  <path d="M0 -14 L3.5 -3.5 L14 0 L3.5 3.5 L0 14 L-3.5 3.5 L-14 0 L-3.5 -3.5 Z"
+                    fill="var(--color-peach)"/>
+                </g>
+              </g>
+
+              <!-- wrench leaning on easel -->
+              <g transform="translate(428,318) rotate(24)">
+                <rect x="-11" y="-30" width="22" height="130" rx="11" fill="var(--color-cobalt)"/>
+                <path d="M-22 -30 a22 22 0 1 0 44 0 l-11 4 v-14 h-11 v14 Z" fill="var(--color-cobalt)"/>
+                <circle cx="0" cy="78" r="5" fill="#fff" opacity="0.7"/>
+                <circle cx="0" cy="92" r="5" fill="#fff" opacity="0.45"/>
+              </g>
+
+              <!-- floating paintbrush -->
+              <g class="mnt-float" transform="translate(120,110) rotate(-28)">
+                <rect x="-9" y="-70" width="18" height="105" rx="9" fill="var(--color-peach)"/>
+                <rect x="-11" y="35" width="22" height="20" rx="4" fill="var(--color-cobalt)"/>
+                <path d="M-11 55 h22 l-6 34 c-2 8 -8 8 -10 0 Z" fill="var(--color-coral)"/>
+              </g>
+
+              <!-- floating pencil -->
+              <g class="mnt-float-2" transform="translate(540,330) rotate(30)">
+                <rect x="-9" y="-52" width="18" height="80" rx="3" fill="var(--color-sage)"/>
+                <path d="M-9 28 h18 l0 10 -9 14 -9 -14 Z" fill="#E8C39E"/>
+                <path d="M-3.5 44.5 h7 l-3.5 7.5 Z" fill="var(--color-ink)"/>
+                <rect x="-9" y="-62" width="18" height="12" rx="3" fill="var(--color-coral)"/>
+              </g>
+
+              <!-- traffic cone -->
+              <g transform="translate(492,420)">
+                <ellipse cx="0" cy="42" rx="46" ry="9" fill="var(--border-medium)"/>
+                <rect x="-42" y="32" width="84" height="12" rx="6" fill="var(--color-coral)"/>
+                <path d="M-28 34 L-14 -34 a6 6 0 0 1 12 0 L28 34 Z" fill="var(--color-coral)"/>
+                <path d="M-21.5 2 h43 l-4 -14 h-35 Z" fill="#fff" opacity="0.92"/>
+              </g>
+
+              <!-- sparkles -->
+              <g fill="var(--color-lavender)">
+                <path class="mnt-pulse" transform="translate(88,268)" d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z"/>
+                <path class="mnt-pulse" transform="translate(560,230)" d="M0 -10 L2.6 -2.6 L10 0 L2.6 2.6 L0 10 L-2.6 2.6 L-10 0 L-2.6 -2.6 Z"/>
+              </g>
+              <g fill="var(--color-coral)">
+                <circle class="mnt-pulse" cx="540" cy="72" r="7"/>
+                <circle class="mnt-pulse" cx="180" cy="66" r="5"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PLATFORM UPDATE MESSAGE -->
+    <section id="update-message" class="section section--alt">
+      <div class="container-narrow" style="text-align:center;">
+        <div class="card" style="padding:clamp(2rem, 4vw, 3.5rem);max-width:760px;margin-inline:auto;">
+          <span class="badge badge-sage" style="margin-bottom:1rem;display:inline-block;">Scheduled Maintenance &amp; Upgrade</span>
+          <h2 style="font-size:2rem;margin-bottom:1rem;">Artifex Atelier 2.0 Architecture</h2>
+          <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1.5rem;">
+            Our core public academy and student portals remain fully operational. This countdown represents the anticipated debut of our new Real-Time Studio Canvas engine, enabling collaborative peer drawing sessions directly in the browser!
+          </p>
+          <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;">
+            <div style="text-align:left;">
+              <strong style="color:var(--status-success);display:block;">✓ Existing Student Dashboards:</strong>
+              <span style="font-size:0.85rem;color:var(--text-muted);">100% Operational &amp; Unaffected</span>
+            </div>
+            <div style="text-align:left;">
+              <strong style="color:var(--color-cobalt);display:block;">✓ Assignment Grading Desk:</strong>
+              <span style="font-size:0.85rem;color:var(--text-muted);">On Schedule (48h Turnaround)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: STATUS / COUNTDOWN CLOCK -->
+    <section id="countdown-section" class="section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--cobalt">Official Launch Date</span>
+          <h2>Atelier 2.0 Global Debut Countdown</h2>
+          <p class="section-subtitle">
+            Our engineering and artist faculty teams are putting the final varnish on the new platform.
+          </p>
+        </div>
+
+        <div id="artifex-countdown" class="countdown-grid">
+          <div class="countdown-box">
+            <div id="cd-days" class="countdown-digits">48</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-box">
+            <div id="cd-hours" class="countdown-digits">14</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-box">
+            <div id="cd-mins" class="countdown-digits">32</div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-box">
+            <div id="cd-secs" class="countdown-digits">09</div>
+            <div class="countdown-label">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: UPCOMING FEATURES -->
+    <section id="upcoming-features" class="section section--alt">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--lavender">What Is Coming</span>
+          <h2>Exciting New Atelier Features</h2>
+          <p class="section-subtitle">
+            A preview of the tools built exclusively for online art and illustration students.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper" style="background:var(--color-coral-light);color:var(--color-coral);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(45 12 12)"><rect x="10.8" y="2.5" width="2.4" height="11" rx="1.2"/><path d="M9.8 13.5h4.4L12 21z"/></g></svg></div>
+            <h3>Collaborative Studio Whiteboards</h3>
+            <p>Draw simultaneously with cohort peers and mentors during live weekend paint-jams with multi-cursor canvas sync.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper" style="background:var(--color-cobalt-light);color:var(--color-cobalt);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7l8.7 5 8.7-5M12 22V12"/></svg></div>
+            <h3>Interactive 3D Anatomical Écorché</h3>
+            <p>Rotate human skeletal landmarks and muscular planes in 3D with customizable directional key lighting.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper" style="background:var(--color-sage-light);color:var(--color-sage);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M12 18h.01"/></svg></div>
+            <h3>Native iOS &amp; Android Apps</h3>
+            <p>Watch lessons offline, download brush archives, and receive instant push notifications when critiques are ready.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EMAIL NOTIFICATION FORM -->
+    <section id="notify-section" class="section">
+      <div class="container-narrow" style="text-align:center;">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--coral">VIP Early Access</span>
+          <h2>Be the First to Experience Atelier 2.0</h2>
+          <p class="section-subtitle">
+            Sign up to receive early beta access, an exclusive commemorative brush set, and early admission discounts.
+          </p>
+        </div>
+
+        <div class="form-card" style="max-width:540px;margin-inline:auto;">
+          <form class="newsletter-form" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <input type="email" placeholder="Enter your artist email address" required class="form-control" style="flex:1;min-width:240px;">
+            <button type="submit" class="btn btn-coral">Notify Me at Launch →</button>
+          </form>
+          <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.75rem;">
+            We respect your inbox. You will only receive official launch dispatches.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT / SUPPORT CTA -->
+    <section id="cs-contact-cta" class="section section--alt" style="background:linear-gradient(135deg, #151822 0%, #202636 100%);color:#FFFFFF;">
+      <div class="container" style="text-align:center;max-width:760px;">
+        <span class="badge badge-coral" style="margin-bottom:1.5rem;">Have Questions?</span>
+        <h2 style="color:#FFFFFF;margin-bottom:1.25rem;">
+          Need Assistance with Current Courses?
+        </h2>
+        <p style="color:#B8BCCB;font-size:1.15rem;margin-bottom:2.5rem;line-height:1.7;">
+          Current student courses, video lessons, and assignment critiques remain fully accessible.
+        </p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="student-dashboard.html" class="btn btn-coral btn-lg">Open Student Dashboard</a>
+          <a href="contact.html" class="btn btn-outline btn-lg" style="color:#FFFFFF;border-color:rgba(255,255,255,0.25);">Contact Support Desk</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="../js/data.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97352">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Mastering Lost and Found Edges — Artifex Academy Journal</title>
+  <meta name="description" content="Step-by-step masterclass tutorial on lost and found edges, eye-tracking hierarchy, and edge transitions by Elena Rostova.">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+  <!-- GLOBAL STICKY HEADER -->
+    <!-- GLOBAL STICKY HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="../index.html" class="brand-logo" aria-label="Artifex Academy Home">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Profile -->
+        <div class="profile-dropdown">
+          <button class="action-icon-btn" aria-label="Your Profile" aria-haspopup="true" aria-expanded="false" title="Your Profile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+          <div class="profile-dropdown-menu" role="menu">
+            <a href="student-dashboard.html" role="menuitem"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>User Dashboard</span></a>
+            <a href="admin-dashboard.html" role="menuitem"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="M9 11.5l2 2 4-4.5"/></svg><span>Admin Dashboard</span></a>
+          </div>
+        </div>
+        <!-- Theme Toggle -->
+        <button class="action-icon-btn btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button class="action-icon-btn btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction">
+          LTR
+        </button>
+
+        <!-- Login CTA -->
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span>Login</span>
+          <span class="icon-arrow">→</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="btn-mobile-toggle" aria-label="Open Mobile Menu">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </div>
+      <button class="action-icon-btn btn-close-mobile" aria-label="Close Mobile Menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="../index.html" class="mobile-nav-link">Home 1 (General)</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2 (Niche)</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Courses &amp; Services</a>
+      <a href="service-details.html" class="mobile-nav-link">Course Details</a>
+      <a href="blog.html" class="mobile-nav-link">Editorial &amp; Tutorials</a>
+      <a href="pricing.html" class="mobile-nav-link">Pricing Plans</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Admissions</a>
+      <a href="sitemap.html" class="mobile-nav-link">Sitemap</a>
+      <a href="student-dashboard.html" class="mobile-nav-link" style="color:var(--color-coral);">★ Student Dashboard</a>
+      <a href="admin-dashboard.html" class="mobile-nav-link" style="color:var(--color-cobalt);">Admin Dashboard</a>
+    </div>
+    <div style="margin-top:auto;display:flex;gap:1rem;">
+      <button class="btn-pages-switcher" style="flex:1;">View All 16 Pages</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT: EXACTLY 6 SECTIONS -->
+  <main id="main-content">
+
+    <!-- SECTION 1: ARTICLE HERO -->
+    <section id="article-hero" class="section hero">
+      <div class="container-narrow" style="text-align:center;">
+        <div style="display:flex;align-items:center;justify-content:center;gap:0.75rem;margin-bottom:1.5rem;">
+          <span class="badge badge-coral">Digital Painting Masterclass</span>
+          <span style="font-size:0.85rem;color:var(--text-muted);">Published Oct 10, 2026 • 7 min read</span>
+        </div>
+
+        <h1 style="font-size:clamp(2.4rem, 4.5vw, 3.8rem);margin-bottom:1.5rem;line-height:1.2;">
+          Mastering Lost and Found Edges: <br><span class="font-serif">How to Guide the Viewer's Gaze.</span>
+        </h1>
+
+        <div style="display:inline-flex;align-items:center;gap:1rem;margin-bottom:2.5rem;padding:0.5rem 1rem;background:var(--bg-surface);border:1px solid var(--border-light);border-radius:var(--radius-full);">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" style="width:40px;height:40px;border-radius:50%;object-fit:cover;" alt="Elena Rostova">
+          <div style="text-align:left;">
+            <strong style="font-size:0.9rem;display:block;">Elena Rostova</strong>
+            <span style="font-size:0.75rem;color:var(--text-muted);">Lead Visual Dev Artist • Artifex Faculty</span>
+          </div>
+        </div>
+
+        <div class="hero-image-frame" style="aspect-ratio:16/9;border-radius:var(--radius-xl);max-height:500px;">
+          <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80" alt="Mastering lost and found edges visual demonstration">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ARTICLE INTRODUCTION -->
+    <section id="article-intro" class="section section--alt">
+      <div class="container-narrow">
+        <div class="editorial-article">
+          <p class="lead" style="font-weight:600;color:var(--text-primary);font-size:1.35rem;margin-bottom:2rem;line-height:1.6;">
+            One of the most persistent habits that separates developing illustrators from seasoned studio masters is the treatment of edges. When everything on your canvas is razor-sharp, nothing is important.
+          </p>
+
+          <p>
+            When we examine a masterwork by John Singer Sargent, Anders Zorn, or modern concept giants like Craig Mullins, we notice an extraordinary paradox: you can point to whole swathes of the canvas where figures melt entirely into the surrounding atmospheric shadow, yet your brain perceives the figure with absolute dimensional solidity.
+          </p>
+
+          <div class="editorial-callout">
+            <strong style="display:block;font-size:1.1rem;margin-bottom:0.5rem;color:var(--color-lavender);">The Studio Golden Rule of Edges:</strong>
+            "The human eye seeks high contrast and sharp transitions. If your secondary characters and background foliage possess the same knife-edge sharpness as the protagonist's eyes, the viewer's optic nerve becomes fatigued in under ten seconds."
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MAIN EDITORIAL CONTENT -->
+    <section id="article-content" class="section">
+      <div class="container-narrow">
+        <div class="editorial-article">
+          <h2>The Four Distinct Edge Categories</h2>
+          <p>
+            Before opening your digital painting software or picking up an oil sable brush, you must mentally catalog every transition on your canvas into one of four distinct categories:
+          </p>
+
+          <div class="features-grid" style="grid-template-columns:1fr 1fr;margin-block:2rem;">
+            <div class="feature-box">
+              <strong style="color:var(--color-coral);display:block;margin-bottom:0.35rem;">1. Hard Edges</strong>
+              <p style="font-size:0.9rem;">Abrupt value or color changes where one opaque plane casts a shadow over another in direct sunlight, or the silhouette of a sharp helmet against sky.</p>
+            </div>
+            <div class="feature-box">
+              <strong style="color:var(--color-cobalt);display:block;margin-bottom:0.35rem;">2. Firm Edges</strong>
+              <p style="font-size:0.9rem;">Transitions that clearly define a turning plane, but with a micro-graduation of 2 to 4 pixels that signals rounded anatomical volume.</p>
+            </div>
+            <div class="feature-box">
+              <strong style="color:var(--color-sage);display:block;margin-bottom:0.35rem;">3. Soft Edges</strong>
+              <p style="font-size:0.9rem;">Diffuse form transitions found along cast shadows illuminated by soft skylight, turning cylinders of cloth drapery, and cheeks.</p>
+            </div>
+            <div class="feature-box">
+              <strong style="color:var(--color-lavender);display:block;margin-bottom:0.35rem;">4. Lost Edges</strong>
+              <p style="font-size:0.9rem;">The boundary between figure and ground disappears completely because both share identical tonal value. The viewer’s brain effortlessly fills in the rest.</p>
+            </div>
+          </div>
+
+          <p>
+            By intentionally dropping the edge between a character's shadowed shoulder and the dark cave wall behind them, you create dramatic depth while instantly thrusting the sunlit facial profile forward.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: STEP-BY-STEP VISUAL TUTORIAL -->
+    <section id="step-by-step-tutorial" class="section section--alt">
+      <div class="container-narrow">
+        <div class="section-header">
+          <span class="section-tag section-tag--coral">Studio Exercise</span>
+          <h2>The 4-Step Edge Hierarchy Routine</h2>
+          <p class="section-subtitle">Follow this exercise on your current work in progress.</p>
+        </div>
+
+        <div>
+          <div class="tutorial-step-card">
+            <div class="tutorial-step-num">1</div>
+            <div>
+              <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Identify Your Single Focal Pinnacle</h3>
+              <p style="font-size:0.95rem;color:var(--text-secondary);">
+                Locate the single 5% zone of your painting where emotional drama peaks (usually the character's eye line or key action). This is the only area permitted to feature maximum sharpness paired with highest value contrast.
+              </p>
+            </div>
+          </div>
+
+          <div class="tutorial-step-card">
+            <div class="tutorial-step-num">2</div>
+            <div>
+              <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Group Shadow Values Into Unified Planes</h3>
+              <p style="font-size:0.95rem;color:var(--text-secondary);">
+                Squint at your canvas. Anywhere a shadow meets another shadow of equal value, blend them together completely using a large chalk brush or soft water wash. Eliminate unnecessary borders.
+              </p>
+            </div>
+          </div>
+
+          <div class="tutorial-step-card">
+            <div class="tutorial-step-num">3</div>
+            <div>
+              <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Deploy the 60% Bristle Rake for Turning Planes</h3>
+              <p style="font-size:0.95rem;color:var(--text-secondary);">
+                Use a textured smudge tool or bristle dry-brush to gently scumble turning surfaces on forearms, cloth folds, and atmospheric mountains.
+              </p>
+            </div>
+          </div>
+
+          <div class="tutorial-step-card">
+            <div class="tutorial-step-num">4</div>
+            <div>
+              <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">The 25% Zoom Verification Test</h3>
+              <p style="font-size:0.95rem;color:var(--text-secondary);">
+                Zoom out to 25% scale or step back 6 feet from your physical easel. Does your eye immediately settle on the focal point without getting snagged on background noise? If yes, your edges are solved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: RELATED ARTICLES -->
+    <section id="related-articles" class="section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--cobalt">Further Reading</span>
+          <h2>Related Masterclass Guides</h2>
+        </div>
+
+        <div class="courses-grid">
+          <div class="card">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Granulating Watercolors">
+            </div>
+            <div class="card-body">
+              <span class="badge badge-sage" style="align-self:flex-start;margin-bottom:0.5rem;">Watercolor</span>
+              <h4 style="font-size:1.15rem;margin-bottom:0.5rem;">The Alchemy of Granulating Watercolors</h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">How mineral pigments settle into Arches paper valleys.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-outline">Read Guide →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80" alt="Character Silhouette Psychology">
+            </div>
+            <div class="card-body">
+              <span class="badge badge-lavender" style="align-self:flex-start;margin-bottom:0.5rem;">Character Design</span>
+              <h4 style="font-size:1.15rem;margin-bottom:0.5rem;">Character Silhouette Psychology</h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">Designing characters that read instantly at thumbnail scale.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-outline">Read Guide →</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80" alt="Anatomy Without Memorization">
+            </div>
+            <div class="card-body">
+              <span class="badge badge-peach" style="align-self:flex-start;margin-bottom:0.5rem;">Drawing</span>
+              <h4 style="font-size:1.15rem;margin-bottom:0.5rem;">Anatomy Without Memorization</h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">The 7 constructive bony landmarks that anchor figure drawing.</p>
+              <a href="blog-details.html" class="btn btn-sm btn-outline">Read Guide →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: COURSE RECOMMENDATION + CTA -->
+    <section id="course-recommendation-cta" class="section section--alt" style="background:linear-gradient(135deg, #151822 0%, #202636 100%);color:#FFFFFF;">
+      <div class="container" style="text-align:center;max-width:800px;">
+        <span class="badge badge-coral" style="margin-bottom:1.5rem;">Recommended Course Pairing</span>
+        <h2 style="color:#FFFFFF;margin-bottom:1.25rem;">
+          Put Edge Control Into Practice with Elena Rostova
+        </h2>
+        <p style="color:#B8BCCB;font-size:1.15rem;margin-bottom:2.5rem;line-height:1.7;">
+          Module 4 of our flagship <em>Digital Illustration Masterclass</em> is dedicated entirely to Brush Economy and Edge Hierarchy. Enroll now to receive live draw-over feedback on your painting.
+        </p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;">
+          <a href="service-details.html" class="btn btn-coral btn-lg">
+            <span>Explore Digital Illustration Masterclass</span>
+            <span class="icon-arrow">→</span>
+          </a>
+          <a href="pricing.html" class="btn btn-outline btn-lg" style="color:#FFFFFF;border-color:rgba(255,255,255,0.25);">
+            <span>View All-Access Membership</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+    <!-- GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+            <span class="brand-text"><span>Artifex Atelier</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+          </a>
+          <p class="footer-desc">
+            The premier online academy for illustrators, painters, and visual storytellers. Rigorous mentorship, inspiring community, and lifelong artistic craft.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-demo-pill">San Francisco Atelier</span>
+            <span class="footer-demo-pill">Worldwide Online Access</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Main Pages</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1 – General</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 – Niche Focus</a></li>
+            <li><a href="about.html" class="footer-link">About Our Atelier</a></li>
+            <li><a href="services.html" class="footer-link">Course Catalog</a></li>
+            <li><a href="service-details.html" class="footer-link">Flagship Course Details</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Creative Portals</h4>
+          <ul class="footer-links">
+            <li><a href="student-dashboard.html" class="footer-link" style="color:var(--color-coral);font-weight:600;">★ Student Dashboard</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link">Admin Dashboard</a></li>
+            <li><a href="login.html" class="footer-link">Student Login</a></li>
+            <li><a href="signup.html" class="footer-link">Create Account</a></li>
+            <li><a href="pricing.html" class="footer-link">Membership Plans</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Admissions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Editorial &amp; Extra</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html" class="footer-link">Art Tutorials &amp; Blog</a></li>
+            <li><a href="blog-details.html" class="footer-link">Tutorial Deep-Dive</a></li>
+            <li><a href="404.html" class="footer-link">404 Error Page</a></li>
+            <li><a href="maintenance.html" class="footer-link">Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Studio Dispatch</h4>
+          <p style="color:#9C9EA8;font-size:0.85rem;margin-bottom:1rem;">
+            Receive weekly drawing prompts, brush packs, and tutorial breakdowns.
+          </p>
+          <form class="newsletter-form" style="display:flex;gap:0.5rem;">
+            <input type="email" placeholder="Your artist email" required style="padding:0.6rem 0.85rem;border-radius:var(--radius-sm);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#FFFFFF;font-size:0.85rem;flex:1;">
+            <button type="submit" class="btn btn-coral btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Artifex Academy Inc. All rights reserved. Creative education crafted for passionate artists.</p>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-link">Terms of Service</a>
+          <a href="sitemap.html" class="footer-link">Sitemap Page →</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages.js"></script>
+</body>
+</html>

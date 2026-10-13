@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97352">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Artifex Academy — Online Art &amp; Illustration Niche Education</title>
+  <meta name="description" content="Explore online art &amp; illustration education by medium and skill level. Structured pathways for drawing fundamentals, digital illustration, watercolor, character design, and portfolio development.">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+  <!-- GLOBAL STICKY HEADER -->
+    <!-- GLOBAL STICKY HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="../index.html" class="brand-logo" aria-label="Artifex Academy Home">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link active">Home 2</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Profile -->
+        <div class="profile-dropdown">
+          <button class="action-icon-btn" aria-label="Your Profile" aria-haspopup="true" aria-expanded="false" title="Your Profile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+          <div class="profile-dropdown-menu" role="menu">
+            <a href="student-dashboard.html" role="menuitem"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>User Dashboard</span></a>
+            <a href="admin-dashboard.html" role="menuitem"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="M9 11.5l2 2 4-4.5"/></svg><span>Admin Dashboard</span></a>
+          </div>
+        </div>
+        <!-- Theme Toggle -->
+        <button class="action-icon-btn btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button class="action-icon-btn btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction">
+          LTR
+        </button>
+
+        <!-- Login CTA -->
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span>Login</span>
+          <span class="icon-arrow">→</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="btn-mobile-toggle" aria-label="Open Mobile Menu">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </div>
+      <button class="action-icon-btn btn-close-mobile" aria-label="Close Mobile Menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="../index.html" class="mobile-nav-link">Home 1 (General)</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2 (Niche)</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Courses &amp; Services</a>
+      <a href="service-details.html" class="mobile-nav-link">Course Details</a>
+      <a href="blog.html" class="mobile-nav-link">Editorial &amp; Tutorials</a>
+      <a href="pricing.html" class="mobile-nav-link">Pricing Plans</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Admissions</a>
+      <a href="sitemap.html" class="mobile-nav-link">Sitemap</a>
+      <a href="student-dashboard.html" class="mobile-nav-link" style="color:var(--color-coral);">★ Student Dashboard</a>
+      <a href="admin-dashboard.html" class="mobile-nav-link" style="color:var(--color-cobalt);">Admin Dashboard</a>
+    </div>
+    <div style="margin-top:auto;display:flex;gap:1rem;">
+      <button class="btn-pages-switcher" style="flex:1;">View All 16 Pages</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT: EXACTLY 6 SECTIONS -->
+  <main id="main-content">
+
+    <!-- SECTION 1: CREATIVE LEARNING HERO -->
+    <section id="creative-hero" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-row">
+            <span class="section-tag section-tag--coral">Focused Art Discipline</span>
+            <span class="badge badge-lavender">Traditional &amp; Digital</span>
+          </div>
+
+          <h1 class="hero-title">
+            The Dedicated Atelier for <span class="font-serif">Illustrators &amp; Painters.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Whether you wield graphite on cold-pressed paper or an Apple Pencil on glass, explore curated artist pathways designed to advance your craft from observational rigor to imaginative brilliance.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#learning-paths" class="btn btn-cobalt btn-lg">
+              <span>Find Your Learning Path</span>
+              <span class="icon-arrow">→</span>
+            </a>
+            <a href="#explore-mediums" class="btn btn-outline btn-lg">
+              <span>Browse by Medium</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">8 Mediums</span>
+              <span class="stat-label">Traditional to Digital</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5 Pathways</span>
+              <span class="stat-label">Structured Growth</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Art-Focused Curriculum</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80" alt="Watercolors blooming across Arches paper in sunlit art studio">
+          </div>
+          <div class="floating-art-card floating-art-card--bottom">
+            <span style="font-size:1.4rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(45 12 12)"><rect x="10.8" y="2.5" width="2.4" height="11" rx="1.2"/><path d="M9.8 13.5h4.4L12 21z"/></g></svg></span>
+            <div>
+              <strong style="font-size:0.85rem;display:block;">Pure Artistic Craft</strong>
+              <span style="font-size:0.75rem;color:var(--text-muted);">Zero corporate filler modules</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: EXPLORE BY MEDIUM -->
+    <section id="explore-mediums" class="section section--alt">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag">Artistic Disciplines</span>
+          <h2>Explore Courses by Medium</h2>
+          <p class="section-subtitle">
+            From fluid watercolor washes to high-fidelity digital brushes, hone your technical command across our core mediums.
+          </p>
+        </div>
+
+        <div class="gallery-grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));">
+          <!-- Medium 1: Digital Illustration -->
+          <div class="card" style="padding:1.75rem;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Digital Illustration</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+              Procreate, Photoshop &amp; Clip Studio workflows, custom brushes, and rendering.
+            </p>
+            <a href="service-details.html" class="btn btn-sm btn-outline">Explore Courses</a>
+          </div>
+
+          <!-- Medium 2: Watercolor -->
+          <div class="card" style="padding:1.75rem;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/></svg></div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Watercolor</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+              Granulation, wet-on-wet technique, botanical folios, and luminous glazing.
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Courses</a>
+          </div>
+
+          <!-- Medium 3: Acrylic Painting -->
+          <div class="card" style="padding:1.75rem;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="8.3" cy="10.2" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="7.6" r="1.3" fill="currentColor" stroke="none"/><circle cx="15.7" cy="10.2" r="1.3" fill="currentColor" stroke="none"/></svg></div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Acrylic Painting</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+              Heavy body impasto, acrylic gouache palettes, and expressive canvas composition.
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Courses</a>
+          </div>
+
+          <!-- Medium 4: Drawing -->
+          <div class="card" style="padding:1.75rem;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Drawing &amp; Figure</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+              Classical sight-size, constructive anatomy, graphite value scales, and gesture.
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Courses</a>
+          </div>
+
+          <!-- Medium 5: Character Design -->
+          <div class="card" style="padding:1.75rem;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Character Design</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+              Silhouette psychology, model sheets, facial acting, and costume storytelling.
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Courses</a>
+          </div>
+
+          <!-- Medium 6: Concept Art -->
+          <div class="card" style="padding:1.75rem;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.2"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg></div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Concept Art</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+              Worldbuilding environments, cinematic keyframes, and production pipelines.
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Courses</a>
+          </div>
+
+          <!-- Medium 7: Ink & Sketching -->
+          <div class="card" style="padding:1.75rem;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg></div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Ink &amp; Sketching</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+              Dip pens, brush pens, walnut wash, cross-hatching, and architectural journals.
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Courses</a>
+          </div>
+
+          <!-- Medium 8: Mixed Media -->
+          <div class="card" style="padding:1.75rem;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.5 15.5M20 20L8.5 8.5"/></svg></div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.5rem;">Mixed Media</h3>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+              Collaged ephemera, pastels, raw pigments, and fearless visual journal experiments.
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Courses</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: EXPLORE BY SKILL LEVEL -->
+    <section id="explore-levels" class="section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--sage">Skill Tiers</span>
+          <h2>Explore by Experience Level</h2>
+          <p class="section-subtitle">
+            Find the sweet spot where you are properly challenged without feeling overwhelmed. Clear milestones guide each stage.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Beginner -->
+          <div class="feature-box" style="border-top:4px solid var(--status-success);">
+            <span class="badge badge-sage" style="align-self:flex-start;">Foundational</span>
+            <h3 style="margin-top:0.5rem;">Beginner Level</h3>
+            <p>
+              <strong>Recommended Experience:</strong> 0 to 1 year of casual drawing or fresh interest.
+            </p>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">
+              Focus on overcoming the intimidation of the blank page, calibrating hand-eye coordination, understanding 3D geometric volumes, basic lighting, and establishing a consistent daily sketchbook practice.
+            </p>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid var(--border-light);">
+              <a href="services.html" class="btn btn-sm btn-outline" style="width:100%;">View Beginner Courses</a>
+            </div>
+          </div>
+
+          <!-- Intermediate -->
+          <div class="feature-box" style="border-top:4px solid var(--color-coral);">
+            <span class="badge badge-coral" style="align-self:flex-start;">Intermediate</span>
+            <h3 style="margin-top:0.5rem;">Intermediate Level</h3>
+            <p>
+              <strong>Recommended Experience:</strong> 1 to 3 years of consistent drawing or digital painting.
+            </p>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">
+              Focus on advanced color temperature shifts, complex anatomical landmark construction, dynamic silhouette readability, lost-and-found edges, and narrative pacing in visual storytelling.
+            </p>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid var(--border-light);">
+              <a href="service-details.html" class="btn btn-sm btn-coral" style="width:100%;">View Flagship Masterclass</a>
+            </div>
+          </div>
+
+          <!-- Advanced -->
+          <div class="feature-box" style="border-top:4px solid var(--color-cobalt);">
+            <span class="badge badge-cobalt" style="align-self:flex-start;">Professional Track</span>
+            <h3 style="margin-top:0.5rem;">Advanced Level</h3>
+            <p>
+              <strong>Recommended Experience:</strong> 3+ years or artists pursuing commercial studio placement.
+            </p>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">
+              Focus on professional studio pipelines, client revision velocity, high-impact portfolio curation, visual development style guides, and 1-on-1 industry director critique.
+            </p>
+            <div style="margin-top:auto;padding-top:1rem;border-top:1px solid var(--border-light);">
+              <a href="pricing.html" class="btn btn-sm btn-outline" style="width:100%;">View Mentorship Tier</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: LEARNING PATHS -->
+    <section id="learning-paths" class="section section--alt">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--lavender">Curated Roadmaps</span>
+          <h2>Artistic Learning Pathways</h2>
+          <p class="section-subtitle">
+            Skip the guesswork. Our roadmaps sequence multiple courses into comprehensive multi-month training tracks.
+          </p>
+        </div>
+
+        <div class="steps-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+          <!-- Pathway 1 -->
+          <div class="step-card">
+            <span class="badge badge-peach" style="margin-bottom:0.75rem;">Pathway 01</span>
+            <h3 class="step-card-title">Drawing Fundamentals Pathway</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.25rem;">
+              Master gesture lines, sight-size proportions, core shadow mapping, and constructive perspective. The essential bedrock for all visual media.
+            </p>
+            <ul style="font-size:0.85rem;color:var(--text-muted);padding-left:1.25rem;margin-bottom:1.5rem;">
+              <li>Classical Line &amp; Rhythm (Weeks 1–4)</li>
+              <li>Anatomical Landmarks (Weeks 5–8)</li>
+              <li>Tonal Massing in Graphite (Weeks 9–12)</li>
+            </ul>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Pathway</a>
+          </div>
+
+          <!-- Pathway 2 -->
+          <div class="step-card">
+            <span class="badge badge-coral" style="margin-bottom:0.75rem;">Pathway 02</span>
+            <h3 class="step-card-title">Digital Artist Pathway</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.25rem;">
+              Transition seamlessly from paper to pixels. Master tablet pressure, color gamuts, brush economy, layer organization, and cinematic rendering.
+            </p>
+            <ul style="font-size:0.85rem;color:var(--text-muted);padding-left:1.25rem;margin-bottom:1.5rem;">
+              <li>Hardware &amp; Brush Optimization (Weeks 1–3)</li>
+              <li>Values &amp; Light Direction (Weeks 4–8)</li>
+              <li>High-Res Surface Polish (Weeks 9–14)</li>
+            </ul>
+            <a href="service-details.html" class="btn btn-sm btn-coral">Explore Pathway</a>
+          </div>
+
+          <!-- Pathway 3 -->
+          <div class="step-card">
+            <span class="badge badge-sage" style="margin-bottom:0.75rem;">Pathway 03</span>
+            <h3 class="step-card-title">Watercolor Journey</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.25rem;">
+              Harness pigment granulation, wet-in-wet blooms, paper moisture timing, and glowing skies without muddying translucent washes.
+            </p>
+            <ul style="font-size:0.85rem;color:var(--text-muted);padding-left:1.25rem;margin-bottom:1.5rem;">
+              <li>Pigment Chemistry &amp; Paper Prep (Weeks 1–3)</li>
+              <li>Atmospheric Plein Air Glazing (Weeks 4–7)</li>
+              <li>Botanical Detail Mastery (Weeks 8–10)</li>
+            </ul>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Pathway</a>
+          </div>
+
+          <!-- Pathway 4 -->
+          <div class="step-card">
+            <span class="badge badge-lavender" style="margin-bottom:0.75rem;">Pathway 04</span>
+            <h3 class="step-card-title">Character Illustration Pathway</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.25rem;">
+              Build unforgettable characters with distinct shape psychology, believable apparel drapery, expressive emotion matrices, and turnaround sheets.
+            </p>
+            <ul style="font-size:0.85rem;color:var(--text-muted);padding-left:1.25rem;margin-bottom:1.5rem;">
+              <li>Silhouette &amp; Personality Archetypes (Weeks 1–4)</li>
+              <li>Costume &amp; Subtext Posing (Weeks 5–8)</li>
+              <li>Cinematic Character Keyframe (Weeks 9–12)</li>
+            </ul>
+            <a href="services.html" class="btn btn-sm btn-outline">Explore Pathway</a>
+          </div>
+
+          <!-- Pathway 5 -->
+          <div class="step-card" style="grid-column: 1 / -1; max-width: 680px; margin-inline: auto;">
+            <span class="badge badge-cobalt" style="margin-bottom:0.75rem;">Pathway 05</span>
+            <h3 class="step-card-title">Professional Portfolio Development</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.25rem;">
+              Curate, polish, and package 6–8 elite pieces targeted at entertainment studios, editorial publishers, or fine art galleries with faculty review.
+            </p>
+            <a href="pricing.html" class="btn btn-sm btn-cobalt">Apply for Mentorship Pathway</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: MEET THE INSTRUCTORS -->
+    <section id="instructors" class="section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--coral">Master Faculty</span>
+          <h2>Learn Directly from Working Masters</h2>
+          <p class="section-subtitle">
+            Our mentors are working studio leads, award-winning graphic novelists, and exhibiting gallery painters who teach with passion and precision.
+          </p>
+        </div>
+
+        <div class="instructors-grid">
+          <!-- Instructor 1: Elena -->
+          <div class="instructor-card">
+            <div class="instructor-avatar-frame">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=350&q=80" alt="Elena Rostova">
+            </div>
+            <h3 class="instructor-card-name">Elena Rostova</h3>
+            <span class="instructor-card-role">Digital Concept Lead</span>
+            <p class="instructor-card-bio">
+              14 years studio experience at Riot &amp; Netflix. Teaching philosophy: "Brushwork serves emotion first. Every stroke must tell a clear story."
+            </p>
+            <a href="service-details.html" class="btn btn-sm btn-outline">View Course</a>
+          </div>
+
+          <!-- Instructor 2: Mateo -->
+          <div class="instructor-card">
+            <div class="instructor-avatar-frame">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=350&q=80" alt="Mateo Silva">
+            </div>
+            <h3 class="instructor-card-name">Mateo Silva</h3>
+            <span class="instructor-card-role">Watercolor Master</span>
+            <p class="instructor-card-bio">
+              18 years international plein air exhibitions. Teaching philosophy: "Watercolor is a dialogue with water, gravity, and sunlight."
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">View Course</a>
+          </div>
+
+          <!-- Instructor 3: Suki -->
+          <div class="instructor-card">
+            <div class="instructor-avatar-frame">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=350&q=80" alt="Suki Chen">
+            </div>
+            <h3 class="instructor-card-name">Suki Chen</h3>
+            <span class="instructor-card-role">Character Designer</span>
+            <p class="instructor-card-bio">
+              Graphic novel author and studio character designer. Teaching philosophy: "If your character lacks internal contradiction, redesign them."
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">View Course</a>
+          </div>
+
+          <!-- Instructor 4: Julian -->
+          <div class="instructor-card">
+            <div class="instructor-avatar-frame">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=350&q=80" alt="Julian Vance">
+            </div>
+            <h3 class="instructor-card-name">Julian Vance</h3>
+            <span class="instructor-card-role">Classical Atelier Draughtsman</span>
+            <p class="instructor-card-bio">
+              Trained at Florence Academy of Art. Teaching philosophy: "Mastery of the human figure is the highest gateway to artistic freedom."
+            </p>
+            <a href="services.html" class="btn btn-sm btn-outline">View Course</a>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;">
+          <a href="about.html" class="btn btn-outline btn-lg">
+            <span>Learn More About Our Faculty &amp; Story</span>
+            <span class="icon-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: STUDENT SUCCESS & CTA -->
+    <section id="student-success-cta" class="section section--alt" style="background:var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--sage">Student Success</span>
+          <h2>Real Progress. Genuine Artistry.</h2>
+          <p class="section-subtitle">
+            See how dedicated mentorship turns aspiring creators into confident artists, published authors, and studio professionals.
+          </p>
+        </div>
+
+        <div class="courses-grid" style="margin-bottom:3.5rem;">
+          <!-- Story 1 -->
+          <div class="feature-box">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" style="width:50px;height:50px;border-radius:50%;object-fit:cover;" alt="Aurora">
+              <div>
+                <strong>Aurora Sterling</strong>
+                <span style="font-size:0.75rem;color:var(--text-muted);display:block;">Digital Illustration Student</span>
+              </div>
+            </div>
+            <p style="font-size:0.95rem;font-style:italic;color:var(--text-secondary);">
+              "Elena's draw-over critiques completely transformed my color temperature. I went from muddy greys to vibrant narrative scenes in under 8 weeks!"
+            </p>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="feature-box">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" style="width:50px;height:50px;border-radius:50%;object-fit:cover;" alt="Liam">
+              <div>
+                <strong>Liam Gallagher</strong>
+                <span style="font-size:0.75rem;color:var(--text-muted);display:block;">Watercolor Student</span>
+              </div>
+            </div>
+            <p style="font-size:0.95rem;font-style:italic;color:var(--text-secondary);">
+              "Mateo taught me how to stop overworking my paper. Watercolor finally feels like an exciting adventure instead of an accidental mess."
+            </p>
+          </div>
+
+          <!-- Story 3 -->
+          <div class="feature-box">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" style="width:50px;height:50px;border-radius:50%;object-fit:cover;" alt="Amara">
+              <div>
+                <strong>Amara Okonjo</strong>
+                <span style="font-size:0.75rem;color:var(--text-muted);display:block;">Drawing Foundations</span>
+              </div>
+            </div>
+            <p style="font-size:0.95rem;font-style:italic;color:var(--text-secondary);">
+              "Julian's constructive anatomy landmarks gave me the confidence to draw hands and dynamic torsos without relying on constant photographic tracing."
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align:center;max-width:700px;margin-inline:auto;">
+          <h3 style="margin-bottom:1rem;font-size:1.8rem;">Ready to Begin Your Studio Transformation?</h3>
+          <p style="color:var(--text-secondary);margin-bottom:2rem;">
+            Enroll now with full access to modules, video demos, assignment grading, and our international artist community.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <a href="services.html" class="btn btn-coral btn-lg">Browse All Courses</a>
+            <a href="pricing.html" class="btn btn-primary btn-lg">View Membership Plans</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+    <!-- GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+            <span class="brand-text"><span>Artifex Atelier</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+          </a>
+          <p class="footer-desc">
+            The premier online academy for illustrators, painters, and visual storytellers. Rigorous mentorship, inspiring community, and lifelong artistic craft.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-demo-pill">San Francisco Atelier</span>
+            <span class="footer-demo-pill">Worldwide Online Access</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Main Pages</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1 – General</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 – Niche Focus</a></li>
+            <li><a href="about.html" class="footer-link">About Our Atelier</a></li>
+            <li><a href="services.html" class="footer-link">Course Catalog</a></li>
+            <li><a href="service-details.html" class="footer-link">Flagship Course Details</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Creative Portals</h4>
+          <ul class="footer-links">
+            <li><a href="student-dashboard.html" class="footer-link" style="color:var(--color-coral);font-weight:600;">★ Student Dashboard</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link">Admin Dashboard</a></li>
+            <li><a href="login.html" class="footer-link">Student Login</a></li>
+            <li><a href="signup.html" class="footer-link">Create Account</a></li>
+            <li><a href="pricing.html" class="footer-link">Membership Plans</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Admissions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Editorial &amp; Extra</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html" class="footer-link">Art Tutorials &amp; Blog</a></li>
+            <li><a href="blog-details.html" class="footer-link">Tutorial Deep-Dive</a></li>
+            <li><a href="404.html" class="footer-link">404 Error Page</a></li>
+            <li><a href="maintenance.html" class="footer-link">Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Studio Dispatch</h4>
+          <p style="color:#9C9EA8;font-size:0.85rem;margin-bottom:1rem;">
+            Receive weekly drawing prompts, brush packs, and tutorial breakdowns.
+          </p>
+          <form class="newsletter-form" style="display:flex;gap:0.5rem;">
+            <input type="email" placeholder="Your artist email" required style="padding:0.6rem 0.85rem;border-radius:var(--radius-sm);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#FFFFFF;font-size:0.85rem;flex:1;">
+            <button type="submit" class="btn btn-coral btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Artifex Academy Inc. All rights reserved. Creative education crafted for passionate artists.</p>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-link">Terms of Service</a>
+          <a href="sitemap.html" class="footer-link">Sitemap Page →</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages.js"></script>
+</body>
+</html>

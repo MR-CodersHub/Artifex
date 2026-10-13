@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97352">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Admin Dashboard — Platform Administration — Artifex Academy</title>
+  <meta name="description" content="Role-restricted platform administration interface for course management, student oversight, instructor rosters, assignments, and analytics.">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <!-- Corner toggles (theme + direction, fixed top-right) -->
+  <div class="dash-corner-toggles">
+    <button class="toggle-pill toggle-icon-only btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+    <button class="toggle-pill btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction"><span>LTR</span></button>
+  </div>
+
+  <!-- ADMIN APP LAYOUT (no top bar; sidebar only) -->
+  <div class="dashboard-layout">
+    <!-- Admin Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Admin Navigation">
+      <a href="../index.html" class="brand-logo sidebar-brand" aria-label="Artifex Academy Home">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </a>
+      <div class="sidebar-user-card">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--color-cobalt);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;">AD</div>
+        <div class="sidebar-user-meta">
+          <span class="sidebar-user-name">Atelier Director</span>
+          <span class="sidebar-user-role" style="color:var(--color-cobalt);">Platform Administrator</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="sidebar-nav-item active" data-tab="overview">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></span>
+          <span>Platform Analytics</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="courses">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span>
+          <span>Course Management</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="students">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M15.5 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+          <span>Student Directory</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="assignments">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+          <span>Assignment Oversight</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="instructors">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13l1.5 8-5-3-5 3 1.5-8"/></svg></span>
+          <span>Faculty Roster</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="reviews">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg></span>
+          <span>Critique Reviews</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="revenue">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="4.5" width="21" height="15" rx="2.5"/><path d="M1.5 10h21"/></svg></span>
+          <span>Revenue &amp; Billing</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="notifications">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
+          <span>Notifications</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="announcements">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+          <span>Announcements</span>
+        </button>
+        <button class="sidebar-nav-item" data-tab="settings">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+          <span>Platform Settings</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="student-dashboard.html" class="btn btn-outline btn-sm" style="width:100%;margin-bottom:0.75rem;">
+          Switch to Student Portal
+        </a>
+        <button class="sidebar-nav-item" data-tab="logout" style="color:var(--status-danger);width:100%;">
+          <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg></span>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <main class="dashboard-main">
+
+      <!-- TAB: OVERVIEW -->
+      <section id="tab-overview" class="dashboard-tab-panel active">
+        <div class="dashboard-view-header">
+          <div>
+            <span class="badge badge-cobalt" style="margin-bottom:0.5rem;">Role-Restricted Administration</span>
+            <h1 class="dashboard-view-title">Artifex Platform Overview</h1>
+            <p style="color:var(--text-secondary);">Manage course releases, faculty rosters, learner enrollments, and assignment approvals.</p>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <button class="btn btn-cobalt btn-sm" onclick="window.ArtifexStore.showToast('Course creation modal opened.', 'info')">+ Create New Course</button>
+          </div>
+        </div>
+
+        <!-- ANALYTICS METRICS -->
+        <div class="overview-stats-grid">
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Enrolled Students</span>
+              <span class="metric-icon" style="background:var(--color-cobalt-light);color:var(--color-cobalt);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M15.5 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+            </div>
+            <span class="metric-value" id="admin-stat-students">14,820</span>
+            <span class="metric-sub">+480 this month</span>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Monthly Recurring Revenue</span>
+              <span class="metric-icon" style="background:var(--color-sage-light);color:var(--color-sage);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="4.5" width="21" height="15" rx="2.5"/><path d="M1.5 10h21"/></svg></span>
+            </div>
+            <span class="metric-value" id="admin-stat-revenue">$142,680</span>
+            <span class="metric-sub">94% Retention Rate</span>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Pending Critiques</span>
+              <span class="metric-icon" style="background:var(--color-peach-light);color:var(--color-peach);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
+            </div>
+            <span class="metric-value" id="admin-stat-pending">38</span>
+            <span class="metric-sub">Across 6 faculty mentors</span>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Average Completion</span>
+              <span class="metric-icon" style="background:var(--color-coral-light);color:var(--color-coral);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span>
+            </div>
+            <span class="metric-value" id="admin-stat-completion">94.2%</span>
+            <span class="metric-sub">Top decile online academy</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: COURSES -->
+      <section id="tab-courses" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Course Catalog Management</h1>
+            <p style="color:var(--text-secondary);">Release courses, toggle live status, and monitor enrollments.</p>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <button class="btn btn-cobalt btn-sm" onclick="window.ArtifexStore.showToast('Course creation modal opened.', 'info')">+ Create New Course</button>
+          </div>
+        </div>
+        <div class="billing-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;">
+            <h2 style="font-size:1.35rem;">Course Catalog &amp; Module Controls</h2>
+            <span class="badge badge-outline">6 Active Flagships</span>
+          </div>
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Instructor</th>
+                  <th>Medium</th>
+                  <th>Enrolled</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-courses-table-body">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: STUDENTS -->
+      <section id="tab-students" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Active Learner Roster</h1>
+            <p style="color:var(--text-secondary);">Audit enrollments, plans, and learner activity.</p>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <span class="badge badge-cobalt">Audited Cohort</span>
+          </div>
+        </div>
+        <div class="billing-card">
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Student Name</th>
+                  <th>Email</th>
+                  <th>Membership Plan</th>
+                  <th>Active Courses</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-students-table-body">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: ASSIGNMENTS -->
+      <section id="tab-assignments" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Student Assignment Oversight</h1>
+            <p style="color:var(--text-secondary);">Approve submissions and track grading turnaround.</p>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <span class="badge badge-sage">Instant Faculty Approvals</span>
+          </div>
+        </div>
+        <div class="billing-card">
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Assignment Title</th>
+                  <th>Student</th>
+                  <th>Course</th>
+                  <th>Status</th>
+                  <th>Due Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-assignments-table-body">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: INSTRUCTORS -->
+      <section id="tab-instructors" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Faculty Roster</h1>
+            <p style="color:var(--text-secondary);">Working artists mentoring across every medium.</p>
+          </div>
+        </div>
+        <div id="admin-instructors-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;">
+          <!-- Dynamically populated by admin.js -->
+        </div>
+      </section>
+
+      <!-- TAB: REVIEWS -->
+      <section id="tab-reviews" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Recent Critique Reviews</h1>
+            <p style="color:var(--text-secondary);">Latest instructor draw-overs and grades across the academy.</p>
+          </div>
+        </div>
+        <div id="admin-reviews-list" style="display:flex;flex-direction:column;gap:1rem;">
+          <!-- Dynamically populated by admin.js -->
+        </div>
+      </section>
+
+      <!-- TAB: REVENUE -->
+      <section id="tab-revenue" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Revenue &amp; Billing</h1>
+            <p style="color:var(--text-secondary);">Recurring revenue health and processed subscription invoices.</p>
+          </div>
+        </div>
+        <div class="overview-stats-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Monthly Recurring Revenue</span>
+            </div>
+            <span class="metric-value" id="admin-revenue-mrr">$142,680</span>
+            <span class="metric-sub">94% Retention Rate</span>
+          </div>
+          <div class="metric-card">
+            <div class="metric-top">
+              <span class="metric-label">Active Subscriptions</span>
+            </div>
+            <span class="metric-value">14,820</span>
+            <span class="metric-sub">Across 3 membership tiers</span>
+          </div>
+        </div>
+        <div class="billing-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;">
+            <h2 style="font-size:1.35rem;">Processed Invoices</h2>
+            <span class="badge badge-sage">All Settled</span>
+          </div>
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Invoice No</th>
+                  <th>Date</th>
+                  <th>Plan</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="admin-revenue-table-body">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: NOTIFICATIONS -->
+      <section id="tab-notifications" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Platform Notifications</h1>
+            <p style="color:var(--text-secondary);">Academy-wide alerts for critique activity, billing, and events.</p>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <button id="btn-admin-mark-read" class="btn btn-sm btn-outline">Mark All Read</button>
+          </div>
+        </div>
+        <div id="admin-notifications-list" style="display:flex;flex-direction:column;gap:0.85rem;">
+          <!-- Dynamically populated by admin.js -->
+        </div>
+      </section>
+
+      <!-- TAB: ANNOUNCEMENTS -->
+      <section id="tab-announcements" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Academy Announcements</h1>
+            <p style="color:var(--text-secondary);">Broadcast studio news, live events, and term updates.</p>
+          </div>
+        </div>
+        <div class="billing-card" style="margin-bottom:1.5rem;">
+          <h2 style="font-size:1.2rem;margin-bottom:1rem;">Publish New Announcement</h2>
+          <form id="admin-announce-form" class="form-grid">
+            <div class="form-group form-full">
+              <label class="form-label" for="announce-title">Announcement Title</label>
+              <input type="text" id="announce-title" class="form-control" placeholder="e.g. Live Masterclass this Thursday" required>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="announce-message">Message</label>
+              <input type="text" id="announce-message" class="form-control" placeholder="Short studio dispatch for all learners" required>
+            </div>
+            <div class="form-full">
+              <button type="submit" class="btn btn-cobalt">Publish Announcement</button>
+            </div>
+          </form>
+        </div>
+        <div id="admin-announce-list" style="display:flex;flex-direction:column;gap:0.85rem;">
+          <!-- Dynamically populated by admin.js -->
+        </div>
+      </section>
+
+      <!-- TAB: SETTINGS -->
+      <section id="tab-settings" class="dashboard-tab-panel">
+        <div class="dashboard-view-header">
+          <div>
+            <h1 class="dashboard-view-title">Platform Settings</h1>
+            <p style="color:var(--text-secondary);">Admissions contact, grading SLAs, and enrollment controls.</p>
+          </div>
+        </div>
+        <div class="billing-card" style="max-width:640px;">
+          <form id="admin-settings-form" class="form-grid">
+            <div class="form-group form-full">
+              <label class="form-label" for="settings-support-email">Admissions Support Email</label>
+              <input type="email" id="settings-support-email" class="form-control" value="admissions@artifex.academy" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="settings-critique-sla">Critique Turnaround (hours)</label>
+              <input type="number" id="settings-critique-sla" class="form-control" value="48" min="1" max="168" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="settings-trial-days">Free Trial Length (days)</label>
+              <input type="number" id="settings-trial-days" class="form-control" value="7" min="1" max="30" required>
+            </div>
+            <div class="form-full">
+              <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.9rem;cursor:pointer;">
+                <input type="checkbox" id="settings-enrollment-open" checked>
+                <span>Fall 2026 admissions open for new enrollments</span>
+              </label>
+            </div>
+            <div class="form-full" style="margin-top:0.75rem;">
+              <button type="submit" class="btn btn-cobalt">Save Platform Settings</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

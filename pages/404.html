@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97352">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>404 — Canvas Not Found — Artifex Academy</title>
+  <meta name="description" content="Oops! This art canvas has vanished from our atelier. Search courses, browse student artwork, or return to our homepage.">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+  <!-- MINIMAL TOP BAR (brand + theme controls, no nav, no footer) -->
+  <header class="minimal-topbar">
+    <div class="container minimal-topbar-container">
+      <a href="../index.html" class="brand-logo" aria-label="Artifex Academy Home">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </a>
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="action-icon-btn btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <!-- RTL Toggle -->
+        <button class="action-icon-btn btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction">LTR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT: EXACTLY 6 SECTIONS -->
+  <main id="main-content">
+
+    <!-- SECTION 1: CREATIVE 404 HERO -->
+    <section id="error-hero" class="section hero" style="text-align:center;">
+      <div class="container-narrow">
+        <span class="badge badge-coral" style="margin-bottom:1.5rem;font-size:0.9rem;padding:0.4rem 1rem;">
+          Error Code: 404 • Missing Easel
+        </span>
+        <h1 style="font-size:clamp(4.5rem, 9vw, 8rem);line-height:0.9;color:var(--color-coral);margin-bottom:1rem;font-family:var(--font-display);">
+          404
+        </h1>
+        <p class="lead" style="font-size:1.5rem;color:var(--text-primary);max-width:600px;margin-inline:auto;">
+          Looks like someone spilled walnut ink across this page!
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FRIENDLY ERROR MESSAGE -->
+    <section id="error-message" class="section section--alt">
+      <div class="container-narrow" style="text-align:center;">
+        <div class="card" style="padding:2.5rem;max-width:640px;margin-inline:auto;">
+          <div style="font-size:3rem;margin-bottom:1rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg> <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.6 4.6A2 2 0 1 1 11 8H2M12.6 19.4A2 2 0 1 0 14 16H2M17.7 7.7A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
+          <h2 style="font-size:1.75rem;margin-bottom:0.75rem;">This Canvas Has Left the Atelier</h2>
+          <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.6;margin-bottom:1.5rem;">
+            The URL you requested may have been moved, renamed during our recent curriculum expansion, or wiped clean like an experimental gouache study. Don't worry—you can easily find what you need below!
+          </p>
+          <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+            <a href="../index.html" class="btn btn-coral">Return to Academy Home</a>
+            <a href="services.html" class="btn btn-outline">Browse Course Catalog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SEARCH COURSES / ARTICLES -->
+    <section id="search-section" class="section">
+      <div class="container-narrow" style="text-align:center;">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--cobalt">Find Your Subject</span>
+          <h2>Search Courses or Tutorials</h2>
+          <p class="section-subtitle">Looking for a specific medium, instructor, or technique?</p>
+        </div>
+
+        <div style="max-width:560px;margin-inline:auto;display:flex;gap:0.5rem;">
+          <input type="text" id="error-search-input" class="form-control" placeholder="Search: e.g. Watercolor, Digital values, Character..." style="border-radius:var(--radius-full);padding-inline:1.5rem;">
+          <button class="btn btn-cobalt" onclick="window.ArtifexStore.showToast('Searching Atelier course library...', 'info'); setTimeout(() => window.location.href='services.html', 600);">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: POPULAR LINKS -->
+    <section id="popular-links" class="section section--alt">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--sage">Quick Navigation</span>
+          <h2>Popular Atelier Destinations</h2>
+        </div>
+
+        <div class="courses-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+          <a href="../index.html" class="card" style="padding:1.5rem;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22v-8h6v8"/></svg></div>
+            <strong style="display:block;margin-bottom:0.25rem;">Home 1 — General</strong>
+            <span style="font-size:0.8rem;color:var(--text-muted);">Main Academy Portal</span>
+          </a>
+
+          <a href="home-2.html" class="card" style="padding:1.5rem;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg></div>
+            <strong style="display:block;margin-bottom:0.25rem;">Home 2 — Niche</strong>
+            <span style="font-size:0.8rem;color:var(--text-muted);">Explore by Medium &amp; Level</span>
+          </a>
+
+          <a href="service-details.html" class="card" style="padding:1.5rem;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <strong style="display:block;margin-bottom:0.25rem;">Flagship Masterclass</strong>
+            <span style="font-size:0.8rem;color:var(--text-muted);">Digital Illustration</span>
+          </a>
+
+          <a href="student-dashboard.html" class="card" style="padding:1.5rem;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="8.3" cy="10.2" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="7.6" r="1.3" fill="currentColor" stroke="none"/><circle cx="15.7" cy="10.2" r="1.3" fill="currentColor" stroke="none"/></svg></div>
+            <strong style="display:block;margin-bottom:0.25rem;">Student Dashboard</strong>
+            <span style="font-size:0.8rem;color:var(--text-muted);">Learner Studio Portal</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FEATURED STUDENT ARTWORK -->
+    <section id="error-showcase" class="section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--lavender">Inspiration Break</span>
+          <h2>While You Are Here: Discover Student Art</h2>
+          <p class="section-subtitle">Take a moment to enjoy outstanding works produced by Artifex apprentices.</p>
+        </div>
+
+        <div class="gallery-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+          <div class="card" data-lightbox data-lightbox-src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" data-lightbox-title="Solitude in the Neon Canopy" data-lightbox-meta="Digital Illustration by Aurora Sterling">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Solitude in the Neon Canopy">
+            </div>
+            <div class="card-body">
+              <h4 style="font-size:1.1rem;">Solitude in the Neon Canopy</h4>
+              <p style="font-size:0.85rem;color:var(--text-muted);">By Aurora Sterling • Digital Illustration</p>
+            </div>
+          </div>
+
+          <div class="card" data-lightbox data-lightbox-src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80" data-lightbox-title="Morning Mist over Sintra's Pines" data-lightbox-meta="Watercolor by Liam Gallagher">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Morning Mist over Sintra's Pines">
+            </div>
+            <div class="card-body">
+              <h4 style="font-size:1.1rem;">Morning Mist over Sintra's Pines</h4>
+              <p style="font-size:0.85rem;color:var(--text-muted);">By Liam Gallagher • Watercolor</p>
+            </div>
+          </div>
+
+          <div class="card" data-lightbox data-lightbox-src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80" data-lightbox-title="The Clockwork Astrologer" data-lightbox-meta="Character Design by Kenji Takahashi">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80" alt="The Clockwork Astrologer">
+            </div>
+            <div class="card-body">
+              <h4 style="font-size:1.1rem;">The Clockwork Astrologer</h4>
+              <p style="font-size:0.85rem;color:var(--text-muted);">By Kenji Takahashi • Character Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: RETURN HOME CTA -->
+    <section id="error-final-cta" class="section section--alt" style="background:linear-gradient(135deg, #151822 0%, #202636 100%);color:#FFFFFF;">
+      <div class="container" style="text-align:center;max-width:740px;">
+        <span class="badge badge-coral" style="margin-bottom:1.5rem;">Safe Return</span>
+        <h2 style="color:#FFFFFF;margin-bottom:1.25rem;">Ready to Pick Up Your Paintbrush?</h2>
+        <p style="color:#B8BCCB;font-size:1.15rem;margin-bottom:2.5rem;line-height:1.7;">
+          Head back to our main entrance to discover all atelier courses, master faculty, and student community portfolios.
+        </p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="../index.html" class="btn btn-coral btn-lg">Return to Home 1</a>
+          <a href="student-dashboard.html" class="btn btn-outline btn-lg" style="color:#FFFFFF;border-color:rgba(255,255,255,0.25);">Go to Student Dashboard</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="../js/data.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97352">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>About Us — Artifex Academy Online Art School</title>
+  <meta name="description" content="Discover the story, creative philosophy, master instructors, and teaching approach of Artifex Academy. Empowering illustrators and artists worldwide.">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+  <!-- GLOBAL STICKY HEADER -->
+    <!-- GLOBAL STICKY HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="../index.html" class="brand-logo" aria-label="Artifex Academy Home">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Profile -->
+        <div class="profile-dropdown">
+          <button class="action-icon-btn" aria-label="Your Profile" aria-haspopup="true" aria-expanded="false" title="Your Profile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+          <div class="profile-dropdown-menu" role="menu">
+            <a href="student-dashboard.html" role="menuitem"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>User Dashboard</span></a>
+            <a href="admin-dashboard.html" role="menuitem"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="M9 11.5l2 2 4-4.5"/></svg><span>Admin Dashboard</span></a>
+          </div>
+        </div>
+        <!-- Theme Toggle -->
+        <button class="action-icon-btn btn-toggle-theme" aria-label="Toggle Dark / Light Mode" title="Toggle Theme">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button class="action-icon-btn btn-toggle-dir" aria-label="Toggle RTL / LTR layout" title="Toggle Layout Direction">
+          LTR
+        </button>
+
+        <!-- Login CTA -->
+        <a href="login.html" class="btn btn-primary btn-sm">
+          <span>Login</span>
+          <span class="icon-arrow">→</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="btn-mobile-toggle" aria-label="Open Mobile Menu">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+        <span class="brand-text"><span>Artifex</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+      </div>
+      <button class="action-icon-btn btn-close-mobile" aria-label="Close Mobile Menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="../index.html" class="mobile-nav-link">Home 1 (General)</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2 (Niche)</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="services.html" class="mobile-nav-link">Courses &amp; Services</a>
+      <a href="service-details.html" class="mobile-nav-link">Course Details</a>
+      <a href="blog.html" class="mobile-nav-link">Editorial &amp; Tutorials</a>
+      <a href="pricing.html" class="mobile-nav-link">Pricing Plans</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Admissions</a>
+      <a href="sitemap.html" class="mobile-nav-link">Sitemap</a>
+      <a href="student-dashboard.html" class="mobile-nav-link" style="color:var(--color-coral);">★ Student Dashboard</a>
+      <a href="admin-dashboard.html" class="mobile-nav-link" style="color:var(--color-cobalt);">Admin Dashboard</a>
+    </div>
+    <div style="margin-top:auto;display:flex;gap:1rem;">
+      <button class="btn-pages-switcher" style="flex:1;">View All 16 Pages</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT: EXACTLY 6 SECTIONS -->
+  <main id="main-content">
+
+    <!-- SECTION 1: OUR STORY -->
+    <section id="our-story" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag section-tag--coral">Our Genesis &amp; Mission</span>
+          <h1 class="hero-title">
+            Reimagining the Classical Atelier for the <span class="font-serif">Modern Creator.</span>
+          </h1>
+          <p class="hero-desc">
+            Artifex was born out of frustration with cold, impersonal online tutorials. In 2021, a collective of studio leads from San Francisco, Madrid, and Tokyo founded Artifex to revive the warmth, accountability, and deliberate feedback of the European atelier system for artists everywhere.
+          </p>
+          <div style="display:flex;gap:1.5rem;margin-top:2rem;">
+            <div>
+              <strong style="font-family:var(--font-display);font-size:2rem;display:block;">14,800+</strong>
+              <span style="font-size:0.85rem;color:var(--text-muted);">Students Worldwide</span>
+            </div>
+            <div style="border-left:1px solid var(--border-medium);padding-left:1.5rem;">
+              <strong style="font-family:var(--font-display);font-size:2rem;display:block;">38</strong>
+              <span style="font-size:0.85rem;color:var(--text-muted);">Exhibiting Faculty</span>
+            </div>
+            <div style="border-left:1px solid var(--border-medium);padding-left:1.5rem;">
+              <strong style="font-family:var(--font-display);font-size:2rem;display:block;">42+</strong>
+              <span style="font-size:0.85rem;color:var(--text-muted);">Countries Represented</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80" alt="Artifex atelier physical workspace with easels and palettes">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: OUR CREATIVE PHILOSOPHY -->
+    <section id="creative-philosophy" class="section section--alt">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--cobalt">Artistic Core</span>
+          <h2>Our Creative Philosophy</h2>
+          <p class="section-subtitle">
+            We reject the myth of innate genius. Masterful artistry is the deliberate compound interest of curiosity, disciplined observation, and brave experimentation.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper" style="background:var(--color-coral-light);color:var(--color-coral);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2h5M10.5 2v6L4.7 19a2 2 0 0 0 1.8 3h11a2 2 0 0 0 1.8-3L13.5 8V2"/><path d="M7.3 15h9.4"/></svg></div>
+            <h3>Fearless Experimentation</h3>
+            <p>Artistic voice is discovered in the debris of failed studies. We encourage tearing the paper, splashing uninhibited wash, and testing bold color gambits.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper" style="background:var(--color-cobalt-light);color:var(--color-cobalt);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12M6 22h12M8 2v4l4 5 4-5V2M8 22v-4l4-5 4 5v4"/></svg></div>
+            <h3>Deliberate Daily Practice</h3>
+            <p>Ten minutes of intentional anatomical landmark drawing beats eight hours of mindless rendering. We teach you how to see form with ruthless clarity.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper" style="background:var(--color-sage-light);color:var(--color-sage);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="M21 21l-4.3-4.3"/></svg></div>
+            <h3>Insatiable Curiosity</h3>
+            <p>Great illustrators are students of biology, architectural history, light physics, and psychology. We nurture visual wonder across every subject.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper" style="background:var(--color-lavender-light);color:var(--color-lavender);"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.6 5.6 1.9-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9L12 3z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8L19 15z"/></svg></div>
+            <h3>Personal Artistic Voice</h3>
+            <p>We do not clone our instructors. Our goal is to equip you with rock-solid technique so your unique worldview can shine without technical limitation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR INSTRUCTORS -->
+    <section id="our-instructors" class="section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag">Working Artists &amp; Educators</span>
+          <h2>Meet Our Master Faculty</h2>
+          <p class="section-subtitle">
+            Every instructor at Artifex is an actively practicing creator with years of feature animation, commercial illustration, or gallery exhibition experience.
+          </p>
+        </div>
+
+        <div class="instructors-grid">
+          <!-- Elena -->
+          <div class="instructor-card">
+            <div class="instructor-avatar-frame">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=350&q=80" alt="Elena Rostova">
+            </div>
+            <h3 class="instructor-card-name">Elena Rostova</h3>
+            <span class="instructor-card-role">Digital Concept Art &amp; Visual Dev</span>
+            <p class="instructor-card-bio">
+              Former visual dev artist on animated features for Riot &amp; Netflix. Specializes in lighting temperature, values, and narrative staging.
+            </p>
+          </div>
+
+          <!-- Mateo -->
+          <div class="instructor-card">
+            <div class="instructor-avatar-frame">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=350&q=80" alt="Mateo Silva">
+            </div>
+            <h3 class="instructor-card-name">Mateo Silva</h3>
+            <span class="instructor-card-role">Plein Air &amp; Botanical Watercolor</span>
+            <p class="instructor-card-bio">
+              Trained in Seville and Madrid. Celebrated internationally for granulating mineral washes and evocative light timing on Arches paper.
+            </p>
+          </div>
+
+          <!-- Suki -->
+          <div class="instructor-card">
+            <div class="instructor-avatar-frame">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=350&q=80" alt="Suki Chen">
+            </div>
+            <h3 class="instructor-card-name">Suki Chen</h3>
+            <span class="instructor-card-role">Character Design &amp; Comic Storytelling</span>
+            <p class="instructor-card-bio">
+              Author of three published graphic novels and character designer for indie gaming studios. Champion of kinetic pose rhythm and emotional subtext.
+            </p>
+          </div>
+
+          <!-- Julian -->
+          <div class="instructor-card">
+            <div class="instructor-avatar-frame">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=350&q=80" alt="Julian Vance">
+            </div>
+            <h3 class="instructor-card-name">Julian Vance</h3>
+            <span class="instructor-card-role">Academic Draughtsmanship &amp; Anatomy</span>
+            <p class="instructor-card-bio">
+              Florence Academy of Art alumnus with 22 years of classical atelier teaching experience in sight-size drawing and renaissance figurative construction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: OUR TEACHING APPROACH -->
+    <section id="teaching-approach" class="section section--alt">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--sage">Pedagogical Framework</span>
+          <h2>Our Teaching Approach</h2>
+          <p class="section-subtitle">
+            How we translate classical atelier rigor into an engaging, accessible online environment.
+          </p>
+        </div>
+
+        <div class="steps-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+          <div class="step-card">
+            <span class="badge badge-coral" style="margin-bottom:0.75rem;">Stage 1</span>
+            <h3 class="step-card-title">Live Studio Demos</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Watch instructors paint in real time with unedited commentary on thought process, mistakes, and problem-solving.</p>
+          </div>
+
+          <div class="step-card">
+            <span class="badge badge-cobalt" style="margin-bottom:0.75rem;">Stage 2</span>
+            <h3 class="step-card-title">Guided Drills</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Isolate specific technical challenges: value clustering, lost-and-found edges, or water saturation control.</p>
+          </div>
+
+          <div class="step-card">
+            <span class="badge badge-sage" style="margin-bottom:0.75rem;">Stage 3</span>
+            <h3 class="step-card-title">Structured Modules</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Modular curriculum designed to build confidence incrementally without cognitive overload.</p>
+          </div>
+
+          <div class="step-card">
+            <span class="badge badge-lavender" style="margin-bottom:0.75rem;">Stage 4</span>
+            <h3 class="step-card-title">Rigorous Assignments</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Produce real portfolio pieces adhering to industry briefs and creative constraints.</p>
+          </div>
+
+          <div class="step-card">
+            <span class="badge badge-peach" style="margin-bottom:0.75rem;">Stage 5</span>
+            <h3 class="step-card-title">Personal Feedback</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Frame-by-frame draw-overs and honest critique so you know precisely how to iterate and excel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: OUR STUDENT COMMUNITY -->
+    <section id="student-community" class="section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag section-tag--lavender">Global Creative Guild</span>
+          <h2>A Thriving Student Community</h2>
+          <p class="section-subtitle">
+            Art can be isolating, but at Artifex you are part of a vibrant worldwide studio of creators sharing critiques, daily sketches, and artistic encouragement.
+          </p>
+        </div>
+
+        <div class="hero-grid" style="align-items:center;">
+          <div>
+            <h3 style="font-size:1.8rem;margin-bottom:1rem;">Creative Challenges &amp; Peer Inspiration</h3>
+            <p style="font-size:1.05rem;color:var(--text-secondary);margin-bottom:1.5rem;">
+              Every month, the Artifex Atelier hosts themed creative challenges—such as the "30-Day Anatomy Sprint" and "Atmospheric Twilight Jam"—giving students a shared creative pulse.
+            </p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem;">
+              <li style="display:flex;align-items:center;gap:0.5rem;">
+                <span style="color:var(--status-success);font-weight:700;">✓</span>
+                <span>Active 24/7 Discord &amp; Atelier forum critique rooms</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:0.5rem;">
+                <span style="color:var(--status-success);font-weight:700;">✓</span>
+                <span>Bi-weekly live Q&amp;A drawing paint-along streams</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:0.5rem;">
+                <span style="color:var(--status-success);font-weight:700;">✓</span>
+                <span>Public student artwork showcase curated by faculty</span>
+              </li>
+            </ul>
+            <a href="../index.html#showcase" class="btn btn-outline">Explore Student Artwork Showcase</a>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-frame" style="aspect-ratio: 4 / 3;">
+              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1000&q=80" alt="Students collaborating and reviewing sketches">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: OUR VALUES -->
+    <section id="our-values" class="section section--alt" style="background:linear-gradient(135deg, #131418 0%, #1E212B 100%);color:#FFFFFF;">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="badge badge-coral" style="margin-bottom:1rem;">Principles We Uphold</span>
+          <h2 style="color:#FFFFFF;">Our Core Values</h2>
+          <p class="section-subtitle" style="color:#A6AAB8;">
+            The ethical and artistic compass that governs every course, critique, and interaction at Artifex Academy.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);color:#FFFFFF;">
+            <h3 style="color:#FFFFFF;margin-bottom:0.5rem;">1. Uncompromising Craft</h3>
+            <p style="color:#B8BCCB;">We respect traditional artistic heritage while actively exploring cutting-edge digital toolsets.</p>
+          </div>
+
+          <div class="feature-box" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);color:#FFFFFF;">
+            <h3 style="color:#FFFFFF;margin-bottom:0.5rem;">2. Universal Accessibility</h3>
+            <p style="color:#B8BCCB;">Elite art education should not require a $60,000 art school loan or relocation to major capitals.</p>
+          </div>
+
+          <div class="feature-box" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);color:#FFFFFF;">
+            <h3 style="color:#FFFFFF;margin-bottom:0.5rem;">3. Constructive Honesty</h3>
+            <p style="color:#B8BCCB;">Vague compliments do not make artists grow. We provide compassionate, precise, actionable feedback.</p>
+          </div>
+
+          <div class="feature-box" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);color:#FFFFFF;">
+            <h3 style="color:#FFFFFF;margin-bottom:0.5rem;">4. Artistic Autonomy</h3>
+            <p style="color:#B8BCCB;">We honor your unique cultural background, storytelling impulses, and personal vision above dogma.</p>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:3.5rem;">
+          <a href="services.html" class="btn btn-coral btn-lg">Explore Our Courses</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+    <!-- GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <div class="brand-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3" width="9" height="7" rx="1.5"/><path d="M9 10L5.5 21M15 10l3.5 11M12 10v11"/></svg></div>
+            <span class="brand-text"><span>Artifex Atelier</span><span class="brand-tagline">Learn • Create • Inspire</span></span>
+          </a>
+          <p class="footer-desc">
+            The premier online academy for illustrators, painters, and visual storytellers. Rigorous mentorship, inspiring community, and lifelong artistic craft.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-demo-pill">San Francisco Atelier</span>
+            <span class="footer-demo-pill">Worldwide Online Access</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Main Pages</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home 1 – General</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 – Niche Focus</a></li>
+            <li><a href="about.html" class="footer-link">About Our Atelier</a></li>
+            <li><a href="services.html" class="footer-link">Course Catalog</a></li>
+            <li><a href="service-details.html" class="footer-link">Flagship Course Details</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Creative Portals</h4>
+          <ul class="footer-links">
+            <li><a href="student-dashboard.html" class="footer-link" style="color:var(--color-coral);font-weight:600;">★ Student Dashboard</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link">Admin Dashboard</a></li>
+            <li><a href="login.html" class="footer-link">Student Login</a></li>
+            <li><a href="signup.html" class="footer-link">Create Account</a></li>
+            <li><a href="pricing.html" class="footer-link">Membership Plans</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Admissions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Editorial &amp; Extra</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html" class="footer-link">Art Tutorials &amp; Blog</a></li>
+            <li><a href="blog-details.html" class="footer-link">Tutorial Deep-Dive</a></li>
+            <li><a href="404.html" class="footer-link">404 Error Page</a></li>
+            <li><a href="maintenance.html" class="footer-link">Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Studio Dispatch</h4>
+          <p style="color:#9C9EA8;font-size:0.85rem;margin-bottom:1rem;">
+            Receive weekly drawing prompts, brush packs, and tutorial breakdowns.
+          </p>
+          <form class="newsletter-form" style="display:flex;gap:0.5rem;">
+            <input type="email" placeholder="Your artist email" required style="padding:0.6rem 0.85rem;border-radius:var(--radius-sm);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#FFFFFF;font-size:0.85rem;flex:1;">
+            <button type="submit" class="btn btn-coral btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Artifex Academy Inc. All rights reserved. Creative education crafted for passionate artists.</p>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-link">Terms of Service</a>
+          <a href="sitemap.html" class="footer-link">Sitemap Page →</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages.js"></script>
+</body>
+</html>
