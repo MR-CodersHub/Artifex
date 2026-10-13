@@ -21,7 +21,7 @@
           galleryItems.forEach(item => {
             const itemCat = item.getAttribute("data-category");
             if (filterCategory === "all" || itemCat === filterCategory) {
-              item.style.display = "block";
+              item.style.display = "";
               requestAnimationFrame(() => item.style.opacity = "1");
             } else {
               item.style.opacity = "0";
