@@ -273,14 +273,27 @@ p {
 
 /* --- HEADER & NAVIGATION --- */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background-color: var(--bg-glass);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-light);
   transition: all var(--transition-normal);
+}
+
+/* Offset page content for the fixed navbar */
+body:has(.site-header) {
+  padding-top: var(--header-height);
+}
+
+/* Keep anchored sections visible below the fixed navbar */
+section[id],
+div[id] {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
 .header-container {
@@ -294,13 +307,20 @@ p {
 /* Minimal top bar (auth / status / dashboard pages: brand + theme
    controls only, no nav links, no footer) */
 .minimal-topbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background-color: var(--bg-glass);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-light);
+}
+
+/* Offset page content for the fixed minimal topbar */
+body:has(.minimal-topbar) {
+  padding-top: var(--header-height);
 }
 
 .minimal-topbar-container {
@@ -1187,6 +1207,9 @@ a.action-icon-btn {
     gap: 0.6rem;
     height: 68px;
   }
+  body:has(.site-header) {
+    padding-top: 68px;
+  }
   .header-actions {
     gap: 0.45rem;
   }
@@ -1235,7 +1258,7 @@ a.action-icon-btn {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
   .pages-modal-header,
   .pages-modal-body {
     padding: 1rem;
@@ -1249,6 +1272,9 @@ a.action-icon-btn {
   .header-container {
     gap: 0.35rem;
     height: 60px;
+  }
+  body:has(.site-header) {
+    padding-top: 61px;
   }
   .site-header .brand-logo {
     font-size: 1rem;
