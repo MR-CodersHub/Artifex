@@ -1149,9 +1149,15 @@ a.action-icon-btn {
   }
 }
 
-@media (max-width: 760px) {
+@media (min-width: 466px) and (max-width: 760px) {
   .site-header .brand-tagline {
     display: none;
+  }
+}
+
+@media (max-width: 465px) {
+  .site-header .brand-tagline {
+    display: block;
   }
   .pages-modal-header,
   .pages-modal-body {
@@ -1162,7 +1168,7 @@ a.action-icon-btn {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 465px) {
   .container,
   .container-narrow,
   .container-wide {
@@ -1186,6 +1192,12 @@ a.action-icon-btn {
   .header-actions .btn {
     padding: 0.5rem 0.8rem;
     font-size: 0.82rem;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .drawer-cta {
+    display: inline-flex;
   }
   .site-footer .newsletter-form button {
     flex: 1 1 100%;
