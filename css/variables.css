@@ -84,6 +84,11 @@
   --container-wide: 1440px;
   --header-height: 80px;
 
+  /* Shared page rhythm — one source of truth for gutters and section spacing */
+  --page-gutter: clamp(1.5rem, 4vw, 3rem);
+  --section-space: clamp(4rem, 8vw, 7.5rem);
+  --section-space-tight: clamp(3rem, 6vw, 5rem);
+
   /* Directional flow (LTR default) */
   --dir-factor: 1;
   --transform-arrow: none;
@@ -157,4 +162,29 @@
 [dir="rtl"] .icon-arrow,
 [dir="rtl"] .arrow-next {
   transform: scaleX(-1);
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT TOKENS
+   Keeps every container, header and footer on the same left/right rail.
+   ========================================================================== */
+@media (max-width: 640px) {
+  :root {
+    --page-gutter: 1.25rem;
+    --section-space: clamp(3rem, 9vw, 4.5rem);
+    --section-space-tight: clamp(2.5rem, 8vw, 3.5rem);
+  }
+}
+
+@media (max-width: 465px) {
+  :root {
+    --page-gutter: 1rem;
+    --header-height: 68px;
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --header-height: 60px;
+  }
 }

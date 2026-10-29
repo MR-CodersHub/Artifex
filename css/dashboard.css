@@ -204,6 +204,8 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  line-height: 1.65;
+  min-height: 3.3em;
 }
 
 .metric-icon {
@@ -1218,5 +1220,21 @@
   }
   .overview-stats-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet dashboards: two metric cards per row keeps labels and values aligned */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .overview-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .overview-stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .metric-label {
+    min-height: 0;
   }
 }

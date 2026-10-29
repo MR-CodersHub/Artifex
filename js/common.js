@@ -268,12 +268,36 @@
     const drawer = document.querySelector(".mobile-nav-drawer");
     const closeBtn = document.querySelector(".btn-close-mobile");
 
-    if (toggleBtn && drawer) {
-      toggleBtn.addEventListener("click", () => drawer.classList.add("open"));
-    }
-    if (closeBtn && drawer) {
-      closeBtn.addEventListener("click", () => drawer.classList.remove("open"));
-    }
+    if (!toggleBtn || !drawer) return;
+
+    const openDrawer = () => {
+      drawer.classList.add("open");
+      document.body.classList.add("nav-open");
+      toggleBtn.setAttribute("aria-expanded", "true");
+    };
+
+    const closeDrawer = () => {
+      drawer.classList.remove("open");
+      document.body.classList.remove("nav-open");
+      toggleBtn.setAttribute("aria-expanded", "false");
+    };
+
+    toggleBtn.addEventListener("click", openDrawer);
+    if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
+
+    drawer.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeDrawer);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && drawer.classList.contains("open")) {
+        closeDrawer();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1024) closeDrawer();
+    });
   }
 
   function initBackToTop() {
